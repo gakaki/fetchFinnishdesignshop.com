@@ -1,0 +1,1953 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-shop-id="com">
+<head>
+<meta charset="iso-8859-1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQACWFRRGwsAUVVVBwA="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<meta http-equiv="X-Frame-Options" content="deny">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta name="Author" content="Finnish Design Shop"/>
+<meta name="Copyright" content="Finnish Design Shop Oy"/>
+<meta name="Description" content="&quot;The Lantern&quot; a modern LE KLINT classic has grown. The bestseller LE KLINT 101, designed by Kaare Klint, is now available in a XL-version."/>
+<meta name="Keywords" content="Le Klint 101XL pendant, Pendants, Lighting, Finnish Design Shop"/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="101XL pendant"/>
+<meta property="og:url" content="https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html"/>
+<meta property="og:image" content="https://www.finnishdesignshop.com/images/8LeKlint_iso.jpg"/>
+<meta property="og:site_name" content="Finnish Design Shop - Europe"/>
+<meta property="og:description" content="&quot;The Lantern&quot; a modern LE KLINT classic has grown. The bestseller LE KLINT 101, designed by Kaare Klint, is now available in a XL-version."/>
+<meta property="fb:admins" content="187765237930793"/>
+<link rel="canonical" href="https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html">
+<title>Le Klint 101XL pendant | Pendants | Lighting | Finnish Design Shop</title>
+<base href="https://www.finnishdesignshop.com/"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/663616/699344/css/fonts.css"/>
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+<script>document.cookie='screen_resolution='+window.innerWidth+'; path=/';document.cookie='screen_retina='+(window.devicePixelRatio > 1 ? true : false)+'; path=/';</script>
+ 
+<link rel="stylesheet" href="ext/ui/css/fds.css?v=bff2f6e94620a2df0ce2408d78036773"/>
+ 
+ 
+<!--[if lt IE 9]>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+<script>
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-662395-1']);
+		_gaq.push(['_setDomainName', '.finnishdesignshop.com']);
+				_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+<script>
+    var globalTextStorage = {
+        klevu : {
+            "In stock" : "inStock",
+            "In stock soon" : "inStockSoon",
+            "Available for order" : "stockAvailable"
+        }
+    };
+</script>
+</head>
+<body>
+ 
+ 
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-THRJCK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-THRJCK');</script>
+ 
+<header class="navbar navbar-default navbar-fixed-top navbar-plain visible-xs sb-slide">
+<div class="benefit-bar benefit-bar-sm hidden">  
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1 benefit-bar__container">
+<p class='benefit-bar__localization-group' data-localization-group='benefit-bar-eu'>
+<span class='benefit-bar-sm__text benefit_bar_fade'>We ship worldwide to over 180 countries!
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Fast and safe shipping
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Free shipping for all orders over <span data-price_type="free_shipping"><span data-currency_symbol_left="eur">&nbsp;</span><span data-currency="eur">150</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span></span>
+</p>
+<p class='benefit-bar__localization-group' data-localization-group='benefit-bar-noneu'>
+<span class='benefit-bar-sm__text benefit_bar_fade'>We ship worldwide to over 180 countries!
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Fast and safe shipping
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Worldwide shipping starting from <span data-price_type="convert"><span data-currency_symbol_left="eur">&nbsp;</span><span data-currency="eur">7,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span></span>
+</p> </div>
+<div class="col-xs-1 pull-right benefit-bar__close-btn-container">
+<button class="btn btn-link benefit-bar__close-btn" data-benefit-bar-close-btn>&times;</button>
+</div>
+</div>
+</div>
+<table>
+<tbody>
+<tr>
+<td class="button menu">
+<button class="sb-toggle-left navbar-left btn btn-default"><img src="layout/images/ui/mobile-menu-bars@2x.png" alt="Menu" width="19" height="22"/></button>
+</td>
+<td class="logo">
+<a href="https://www.finnishdesignshop.com/">
+<img src="ext/ui/images/logo-xs@2x.png" class="logo" alt="Finnish Design Shop is a design shop specialized in Scandinavian, Finnish, Swedish and Danish design" width="223" height="30"/>
+</a>
+</td>
+<td class="button cart">
+<a href="https://www.finnishdesignshop.com/shopping_cart.php" class="slide-nav-right"><span data-personalize="cart-products-quantity"></span>
+<img src="ext/ui/images/shopping-cart-new-bg@2x.png" width="32" height="55" alt="Shopping Cart"/>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</header>
+<div class="header-clear visible-xs"></div>
+<div id="sb-site">
+<div id="content">
+<div class="cookie-notice hidden">
+<div class="container">
+<div class="cookie-notice__row">
+<div class="cookie-notice__text">
+<p class="cookie-notice__text-paragraph">We use cookies to improve our site and your shopping experience. <span class="cookie-notice__nowrap">By continuing to browse our site you accept our cookie <span class="text-nowrap">policy. <a href="terms_and_info2.php?p=privacy">More info</a></span></span></p>
+</div>
+<div class="cookie-notice__close">
+<a href="#" class="cookie-notice__close-link">&times;</a>
+</div>
+</div>
+</div>
+</div>
+<div class="benefit-bar benefit-bar-md hidden-xs hidden-sm hidden">
+<div class="benefit-bar__container">
+<p class='benefit-bar__localization-group' data-localization-group='benefit-bar-eu'>
+<span class="benefit-bar__text">We ship worldwide to over 180 countries!
+</span>
+<span class="benefit-bar__text">Fast and safe shipping
+</span>
+<span class="benefit-bar__text">Free shipping for all orders over <span data-price_type="free_shipping"><span data-currency_symbol_left="eur">&nbsp;</span><span data-currency="eur">150</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span></span>
+</p>
+<p class='benefit-bar__localization-group' data-localization-group='benefit-bar-noneu'>
+<span class="benefit-bar__text">We ship worldwide to over 180 countries!
+</span>
+<span class="benefit-bar__text">Fast and safe shipping
+</span>
+<span class="benefit-bar__text">Worldwide shipping starting from <span data-price_type="convert"><span data-currency_symbol_left="eur">&nbsp;</span><span data-currency="eur">7,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span></span>
+</p> &nbsp;
+<button class="btn btn-link benefit-bar__close-btn pull-right" data-benefit-bar-close-btn>&times;</button>
+</div>
+</div>
+<div class="benefit-bar benefit-bar-sm hidden-xs hidden-md hidden-lg hidden">  
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1 benefit-bar__container">
+<p class='benefit-bar__localization-group' data-localization-group='benefit-bar-eu'>
+<span class='benefit-bar-sm__text benefit_bar_fade'>We ship worldwide to over 180 countries!
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Fast and safe shipping
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Free shipping for all orders over <span data-price_type="free_shipping"><span data-currency_symbol_left="eur">&nbsp;</span><span data-currency="eur">150</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span></span>
+</p>
+<p class='benefit-bar__localization-group' data-localization-group='benefit-bar-noneu'>
+<span class='benefit-bar-sm__text benefit_bar_fade'>We ship worldwide to over 180 countries!
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Fast and safe shipping
+</span>
+<span class='benefit-bar-sm__text benefit_bar_fade'>Worldwide shipping starting from <span data-price_type="convert"><span data-currency_symbol_left="eur">&nbsp;</span><span data-currency="eur">7,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span></span>
+</p> </div>
+<div class="col-xs-1 pull-right benefit-bar__close-btn-container">
+<button class="btn btn-link benefit-bar__close-btn" data-benefit-bar-close-btn>&times;</button>
+</div>
+</div>
+</div>
+<div class="container main-container">
+<header class="hidden-xs">
+<div class="row wide">
+<div class="col-md-4 col-sm-3 col-xs-2 text-left">
+<ul class="nav nav-pills">
+<li><a style="margin-left:0;padding-left:0;margin-right:0;text-decoration:none !important;cursor:default;" href="javascript:void(0)">Ship to</a></li>
+<li>
+<a style="margin-left:0;margin-right:0;padding-left:0;text-transform:uppercase;" href="#chooseShippingCountry" class="change-country" data-toggle="modal">
+<u data-personalize="change-country" data-personalize-key="country_string" style="opacity:0;"></u>
+</a>
+</li>
+<li><a style="margin-left:0;padding-left:0;text-transform:uppercase;opacity:0;text-decoration:none !important;cursor:default;" href="javascript:void(0)" data-personalize="change-country" data-personalize-key="country_suffix"></a></li>
+</ul>
+</div>
+<div class="col-md-5 col-sm-6 col-xs-8 text-center">
+<ul class="nav nav-pills pull-right">
+<li><a href="terms_and_info2.php?p=faq">Customer Service</a></li>
+<li class="divider"></li>
+<li class="login-links" data-personalize="login-links">
+<a href="https://www.finnishdesignshop.com/account.php">My Account</a>
+</li>
+<li class="divider"></li>
+</ul>
+</div>
+<div class="col-sm-3 col-xs-2 text-right">
+<div class="well well-sm well-plain text-left minicart">
+<a href="https://www.finnishdesignshop.com/shopping_cart.php">Shopping Cart</a>
+<div data-personalize="cart-total">&nbsp;</div>
+<ul class="list-inline">
+<li><a href="https://www.finnishdesignshop.com/shopping_cart.php">View</a></li>
+<li><a href="https://www.finnishdesignshop.com/checkout.php"><span class="hidden-sm"></span> Checkout</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-3 text-left">
+<div class="facebookLikeTop">
+<a class="facebookLikeLink" href="https://www.facebook.com/FinnishDesignShop" target="_blank">Like us on Facebook!</a><br/>
+<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/FinnishDesignShop&amp;layout=button_count&amp;show_faces=false&amp;width=150&amp;action=like&amp;font=verdana&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+</div>
+</div>
+<div class="col-sm-6 text-center">
+<div class="logo">
+<a href="https://www.finnishdesignshop.com/">
+<img src="ext/ui/images/logo@2x.png" class="logo" alt="Finnish Design Shop is a design shop specialized in Scandinavian, Finnish, Swedish and Danish design" width="372" height="50"/>
+</a>
+<p class='under-logo-text'><span style="color: #ffffff;">.</span></p> </div>
+</div>
+<div class="col-sm-3 text-right">
+<form action="search" method="get" class="form-inline form-search form-search--header-desktop" id="quick_search_form" accept-charset="utf-8">
+<div class="form-group">
+<div class="input-group" style="margin-bottom: 10px;">
+<input type="search" name="q" id="keywords" class="form-control form-search__input">
+<span class="input-group-btn">
+<button class="btn btn-default form-search__btn" type="submit">Search</button>
+</span>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 text-center">
+<nav class="navbar yamm navbar-default navbar-plain">
+<div class="container-fluid">
+<ul class="nav navbar-nav">
+ 
+<li>
+<a href="https://www.finnishdesignshop.com/products_new.php">What&rsquo;s New</a>
+</li>
+ 
+<li>
+<a href="https://www.finnishdesignshop.com/campaigns.php">Campaigns</a>
+</li>
+ 
+<li class="dropdown yamm-fw">
+<a href="https://www.finnishdesignshop.com/products.php" class="dropdown-toggle disabled" data-toggle="dropdown">Products</a>
+<ul class="dropdown-menu products">
+<li>
+<div class="yamm-content">
+<div class="row">
+<div class="col-sm-3 c0">
+<p><a href="https://www.finnishdesignshop.com/products.php">View all</a></p>
+<hr>
+<p><strong><a href="https://www.finnishdesignshop.com/furniture-c-899.html">Furniture</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/furniture-247-c-899_1506.html">24/7</a></li><li><a href="https://www.finnishdesignshop.com/furniture-hay-can-c-899_1496.html">Hay Can</a></li><li><a href="https://www.finnishdesignshop.com/furniture-chairs-c-899_901.html">Chairs</a></li><li><a href="https://www.finnishdesignshop.com/furniture-tables-c-899_902.html">Tables</a></li><li><a href="https://www.finnishdesignshop.com/furniture-lounge-poufs-c-899_41.html">Lounge & Poufs</a></li><li><a href="https://www.finnishdesignshop.com/furniture-sofas-c-899_1431.html">Sofas</a></li><li><a href="https://www.finnishdesignshop.com/furniture-bar-stools-c-899_1460.html">Bar stools</a></li><li><a href="https://www.finnishdesignshop.com/furniture-stools-c-899_1005.html">Stools</a></li><li><a href="https://www.finnishdesignshop.com/furniture-bookcases-c-899_867.html">Bookcases</a></li><li><a href="https://www.finnishdesignshop.com/furniture-muuto-stacked-c-899_1381.html">Muuto Stacked</a></li><li><a href="https://www.finnishdesignshop.com/furniture-string-system-c-899_1095.html">String System</a></li><li><a href="https://www.finnishdesignshop.com/furniture-string-works-c-899_1368.html">String Works</a></li><li><a href="https://www.finnishdesignshop.com/furniture-coatracks-hooks-c-899_904.html">Coatracks & hooks</a></li><li><a href="https://www.finnishdesignshop.com/furniture-for-children-c-899_903.html">For Children</a></li></ul><p><strong><a href="https://www.finnishdesignshop.com/outdoor-c-896.html">Outdoor</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/outdoor-outdoor-furniture-c-896_779.html">Outdoor furniture</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-grills-grill-accessories-c-896_772.html">Grills & grill accessories</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-gardening-c-896_776.html">Gardening</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-herbflower-pots-c-896_766.html">Herb/flower pots</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-outdoor-lighting-c-896_787.html">Outdoor lighting</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-bike-accessories-c-896_778.html">Bike accessories</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-bird-tables-bird-boxes-c-896_775.html">Bird tables & bird boxes</a></li></ul></div><div class="col-sm-3 c2"><p><strong><a href="https://www.finnishdesignshop.com/lighting-c-897.html">Lighting</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/lighting-pendants-c-897_693.html">Pendants</a></li><li><a href="https://www.finnishdesignshop.com/lighting-table-lamps-c-897_694.html">Table lamps</a></li><li><a href="https://www.finnishdesignshop.com/lighting-floor-lamps-c-897_695.html">Floor lamps</a></li><li><a href="https://www.finnishdesignshop.com/lighting-task-lights-c-897_713.html">Task lights</a></li><li><a href="https://www.finnishdesignshop.com/lighting-wall-lamps-c-897_712.html">Wall lamps</a></li><li><a href="https://www.finnishdesignshop.com/lighting-lighting-accessories-c-897_1071.html">Lighting accessories</a></li></ul><p><strong><a href="https://www.finnishdesignshop.com/kitchenware-c-893.html">Kitchenware</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/kitchenware-plantui-smart-garden-c-893_1304.html">Plantui Smart Garden</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-saucepans-casseroles-pots-c-893_869.html">Saucepans, casseroles & pots</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-frying-pans-c-893_760.html">Frying pans</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-cutting-boards-c-893_762.html">Cutting boards</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-utensils-c-893_767.html">Kitchen utensils</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-salt-pepper-c-893_765.html">Salt & pepper</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-citrus-squeezers-c-893_770.html">Citrus squeezers</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-storage-c-893_763.html">Kitchen storage</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-textiles-c-893_1037.html">Kitchen textiles</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-cleaning-products-c-893_771.html">Cleaning products</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-drinking-bottles-c-893_1458.html">Drinking bottles</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-accessories-c-893_1027.html">Kitchen accessories</a></li></ul><p><strong><a href="https://www.finnishdesignshop.com/textiles-c-1468.html">Textiles</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/textiles-artek-fabrics-c-1468_1586.html">Artek fabrics</a></li><li><a href="https://www.finnishdesignshop.com/textiles-marimekko-fabrics-c-1468_1474.html">Marimekko fabrics</a></li><li><a href="https://www.finnishdesignshop.com/textiles-rugs-c-1468_1469.html">Rugs</a></li><li><a href="https://www.finnishdesignshop.com/textiles-throws-c-1468_1471.html">Throws</a></li><li><a href="https://www.finnishdesignshop.com/textiles-cushions-c-1468_1470.html">Cushions</a></li><li><a href="https://www.finnishdesignshop.com/textiles-bed-linen-c-1468_1472.html">Bed linen</a></li></ul></div><div class="col-sm-3 c5"><p><strong><a href="https://www.finnishdesignshop.com/decoration-c-895.html">Decoration</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/decoration-posters-c-895_1326.html">Posters</a></li><li><a href="https://www.finnishdesignshop.com/decoration-wallpapers-c-895_1421.html">Wallpapers</a></li><li><a href="https://www.finnishdesignshop.com/decoration-clocks-c-895_945.html">Clocks</a></li><li><a href="https://www.finnishdesignshop.com/decoration-mirrors-c-895_866.html">Mirrors</a></li><li><a href="https://www.finnishdesignshop.com/decoration-candles-c-895_941.html">Candles</a></li><li><a href="https://www.finnishdesignshop.com/decoration-candleholders-c-895_942.html">Candleholders</a></li><li><a href="https://www.finnishdesignshop.com/decoration-vases-c-895_943.html">Vases</a></li><li><a href="https://www.finnishdesignshop.com/decoration-bowls-c-895_944.html">Bowls</a></li><li><a href="https://www.finnishdesignshop.com/decoration-note-boards-magnets-c-895_690.html">Note boards & magnets</a></li><li><a href="https://www.finnishdesignshop.com/decoration-wall-elements-c-895_952.html">Wall elements</a></li><li><a href="https://www.finnishdesignshop.com/decoration-wall-stickers-c-895_1124.html">Wall stickers</a></li><li><a href="https://www.finnishdesignshop.com/decoration-accessories-c-895_1026.html">Accessories</a></li><li><a href="https://www.finnishdesignshop.com/decoration-smoke-alarms-c-895_1123.html">Smoke alarms</a></li><li><a href="https://www.finnishdesignshop.com/decoration-extension-cords-c-895_1094.html">Extension cords</a></li><li><a href="https://www.finnishdesignshop.com/decoration-home-office-c-895_1143.html">Home office</a></li><li><a href="https://www.finnishdesignshop.com/decoration-trash-bins-c-895_1464.html">Trash bins</a></li><li><a href="https://www.finnishdesignshop.com/decoration-mobiles-c-895_1150.html">Mobiles</a></li><li><a href="https://www.finnishdesignshop.com/decoration-stationery-c-895_1160.html">Stationery</a></li></ul><p><strong><a href="https://www.finnishdesignshop.com/storage-c-1476.html">Storage</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/storage-baskets-c-1476_1478.html">Baskets</a></li><li><a href="https://www.finnishdesignshop.com/storage-magazine-racks-c-1476_1477.html">Magazine racks</a></li><li><a href="https://www.finnishdesignshop.com/storage-shelves-c-1476_1480.html">Shelves</a></li><li><a href="https://www.finnishdesignshop.com/storage-small-storage-c-1476_1479.html">Small storage</a></li><li><a href="https://www.finnishdesignshop.com/storage-storage-furniture-c-1476_1483.html">Storage furniture</a></li><li><a href="https://www.finnishdesignshop.com/storage-lassen-frame-c-1476_1482.html">By Lassen Frame</a></li><li><a href="https://www.finnishdesignshop.com/storage-coat-hangers-c-1476_1481.html">Coat hangers</a></li></ul></div><div class="col-sm-3 c7"><p><strong><a href="https://www.finnishdesignshop.com/tableware-c-894.html">Tableware</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/tableware-iittala-issey-miyake-c-894_1467.html">Iittala X Issey Miyake</a></li><li><a href="https://www.finnishdesignshop.com/tableware-glasses-c-894_781.html">Glasses</a></li><li><a href="https://www.finnishdesignshop.com/tableware-dishware-c-894_780.html">Dishware</a></li><li><a href="https://www.finnishdesignshop.com/tableware-cutlery-c-894_782.html">Cutlery</a></li><li><a href="https://www.finnishdesignshop.com/tableware-serving-c-894_1029.html">Serving</a></li><li><a href="https://www.finnishdesignshop.com/tableware-carafes-pitchers-c-894_784.html">Carafes & Pitchers</a></li><li><a href="https://www.finnishdesignshop.com/tableware-trivets-c-894_785.html">Trivets</a></li><li><a href="https://www.finnishdesignshop.com/tableware-trays-c-894_789.html">Trays</a></li><li><a href="https://www.finnishdesignshop.com/tableware-serving-dishes-c-894_790.html">Serving dishes</a></li><li><a href="https://www.finnishdesignshop.com/tableware-coffee-tea-c-894_791.html">Coffee & Tea</a></li><li><a href="https://www.finnishdesignshop.com/tableware-wine-bar-c-894_852.html">Wine & Bar</a></li></ul><p><strong><a href="https://www.finnishdesignshop.com/bathroom-c-999.html">Bathroom</a></strong></p><ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/bathroom-detergents-and-soaps-c-999_1549.html">Detergents and soaps</a></li><li><a href="https://www.finnishdesignshop.com/bathroom-towels-c-999_1000.html">Towels</a></li><li><a href="https://www.finnishdesignshop.com/bathroom-bathrobes-c-999_1001.html">Bathrobes</a></li><li><a href="https://www.finnishdesignshop.com/bathroom-accessories-c-999_1003.html">Accessories</a></li></ul><p><strong><a href="https://www.finnishdesignshop.com/corporate-gifts-c-1164.html">Corporate Gifts</a></strong></p><ul class="list-unstyled"></ul>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+ 
+<li class="dropdown yamm-fw">
+<a href="https://www.finnishdesignshop.com/brands.php" class="dropdown-toggle disabled" data-toggle="dropdown">Brands</a>
+<ul class="dropdown-menu brands brands-dropdown">
+<li>
+<div class="yamm-content">
+<div class="row">
+<div class="col-sm-6">
+<ul class="list-unstyled brands-dropdown__list">
+<li class="brands-dropdown__heading"><strong><a href="https://www.finnishdesignshop.com/manufacturers.php">Manufacturers</a></strong></li>
+<li><a href="https://www.finnishdesignshop.com/Artek-m-111.html">Artek</a></li>
+<li><a href="https://www.finnishdesignshop.com/Hay-m-100.html">Hay</a></li>
+<li><a href="https://www.finnishdesignshop.com/Iittala-m-10.html">Iittala</a></li>
+<li><a href="https://www.finnishdesignshop.com/Marimekko-m-13.html">Marimekko</a></li>
+<li><a href="https://www.finnishdesignshop.com/Menu-m-93.html">Menu</a></li>
+<li><a href="https://www.finnishdesignshop.com/Muuto-m-61.html">Muuto</a></li>
+<li><a href="https://www.finnishdesignshop.com/Nikari-m-208.html">Nikari</a></li>
+<li><a href="https://www.finnishdesignshop.com/Normann_Copenhagen-m-83.html">Normann Copenhagen</a></li>
+<li><a href="https://www.finnishdesignshop.com/Secto_Design-m-52.html">Secto Design</a></li>
+<li><a href="https://www.finnishdesignshop.com/String-m-121.html">String</a></li>
+<li><a href="https://www.finnishdesignshop.com/Louis_Poulsen-m-89.html">Louis Poulsen</a></li>
+<li><a href="https://www.finnishdesignshop.com/Woodnotes-m-19.html">Woodnotes</a></li>
+</ul>
+<p><a href="https://www.finnishdesignshop.com/manufacturers.php">See all manufacturers &gt;</a></p>
+</div>
+<div class="col-sm-6">
+<ul class="list-unstyled brands-dropdown__list">
+<li class="brands-dropdown__heading"><strong><a href="https://www.finnishdesignshop.com/designers.php">Designers</a></strong></li>
+<li><a href="https://www.finnishdesignshop.com/Alvar_Aalto-d-47.html">Alvar Aalto</a></li>
+<li><a href="https://www.finnishdesignshop.com/Eero_Aarnio-d-12.html">Eero Aarnio</a></li>
+<li><a href="https://www.finnishdesignshop.com/Kay_Bojesen-d-233.html">Kay Bojesen</a></li>
+<li><a href="https://www.finnishdesignshop.com/Kaj_Franck-d-27.html">Kaj Franck</a></li>
+<li><a href="https://www.finnishdesignshop.com/Klaus_Haapaniemi-d-34.html">Klaus Haapaniemi</a></li>
+<li><a href="https://www.finnishdesignshop.com/Arne_Jacobsen-d-72.html">Arne Jacobsen</a></li>
+<li><a href="https://www.finnishdesignshop.com/Birger_Kaipiainen-d-16.html">Birger Kaipiainen</a></li>
+<li><a href="https://www.finnishdesignshop.com/Harri_Koskinen-d-48.html">Harri Koskinen</a></li>
+<li><a href="https://www.finnishdesignshop.com/Yrjo_Kukkapuro-d-13.html">Yrjö Kukkapuro</a></li>
+<li><a href="https://www.finnishdesignshop.com/Ritva_Puotila-d-101.html">Ritva Puotila</a></li>
+<li><a href="https://www.finnishdesignshop.com/Ilmari_Tapiovaara-d-85.html">Ilmari Tapiovaara</a></li>
+<li><a href="https://www.finnishdesignshop.com/Tapio_Wirkkala-d-39.html">Tapio Wirkkala</a></li>
+</ul>
+<p><a href="https://www.finnishdesignshop.com/designers.php">See all designers &gt;</a></p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+ 
+<li>
+<a href="https://www.finnishdesignshop.com/inspiration">Inspiration</a>
+</li>
+ 
+<li class="dropdown">
+<a href="https://www.finnishdesignshop.com/gift-ideas-c-260_366.html" class="dropdown-toggle disabled" data-toggle="dropdown">Gift Ideas</a>
+<ul class="dropdown-menu gifts">
+<li>
+<div class="yamm-content">
+<div class="row">
+<div class="col-sm-12">
+<p><a href="https://www.finnishdesignshop.com/gift-ideas-c-260_366.html">View all</a></p><hr><ul class="list-unstyled"><li class="c-484"><a href="gift-card">Gift cards</a></li><li class="c-1077"><a href="https://www.finnishdesignshop.com/gift-ideas-for-mother-c-260_366_1077.html">For Mother</a></li><li class="c-1297"><a href="https://www.finnishdesignshop.com/gift-ideas-graduation-gifts-c-260_366_1297.html">Graduation gifts</a></li><li class="c-441"><a href="https://www.finnishdesignshop.com/gift-ideas-under-eur-c-260_366_441.html">Under 50 eur</a></li><li class="c-443"><a href="https://www.finnishdesignshop.com/gift-ideas-for-him-c-260_366_443.html">For Him</a></li><li class="c-444"><a href="https://www.finnishdesignshop.com/gift-ideas-for-her-c-260_366_444.html">For Her</a></li><li class="c-1264"><a href="https://www.finnishdesignshop.com/gift-ideas-for-children-c-260_366_1264.html">For Children</a></li><li class="c-566"><a href="https://www.finnishdesignshop.com/gift-ideas-for-globetrotter-c-260_366_566.html">For Globetrotter</a></li><li class="c-445"><a href="https://www.finnishdesignshop.com/gift-ideas-for-decorator-c-260_366_445.html">For Decorator</a></li><li class="c-446"><a href="https://www.finnishdesignshop.com/gift-ideas-for-chef-c-260_366_446.html">For Chef</a></li><li class="c-447"><a href="https://www.finnishdesignshop.com/gift-ideas-for-bartender-c-260_366_447.html">For Bartender</a></li><li class="c-565"><a href="https://www.finnishdesignshop.com/gift-ideas-for-wine-lover-c-260_366_565.html">For Wine lover</a></li><li class="c-498"><a href="https://www.finnishdesignshop.com/gift-ideas-just-married-c-260_366_498.html">Just Married</a></li></ul> </div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<a href="contract-sales">Pro</a>
+</li>
+ 
+<li>
+<a href="specials.php">Outlet</a>
+</li>
+</ul>
+</div> 
+</nav>
+</div>
+</div>
+</header>
+<form class="form-inline mobile-search visible-xs" name="search_form-index-mobile" action="search" method="get" accept-charset="utf-8">
+<input type="hidden" name="csrf_token" value="z32QQmGtKak0oOxls/DFu/eJAqCtkLphR2IGJglLUfk="> <div class="form-group">
+<div class="input-group">
+<input type="search" name="q" class="form-control" placeholder="" autocomplete="off">
+<span class="input-group-btn">
+<button type="submit" value="Search" class="btn btn-default">Search</button>
+</span>
+</div>
+</div>
+</form>
+<ol class="breadcrumb breadcrumb-plain"><li><a href="https://www.finnishdesignshop.com/index.php">Home</a></li><li><a href="https://www.finnishdesignshop.com/lighting-c-897.html">Lighting</a></li><li><a href="https://www.finnishdesignshop.com/lighting-pendants-c-897_693.html">Pendants</a></li><li class="active">101XL pendant</li></ol><div class="alert alert-info registry_mode clearfix" style="display: none;" data-personalize="registry-notification"></div> <main class="product_info normal" role="main" itemscope itemtype="http://schema.org/Product">
+<div class="page-header visible-xs">
+<h1>101XL pendant</h1>
+</div>
+<div class="row">
+<div class="col-md-8 col-sm-7 text-center product_image">
+<div id="product-image-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+ 
+<div class="carousel-inner">
+<div class="item active">
+<a href="images/8LeKlint_iso.jpg" id="main_image_link" data-lightbox="product_image" data-title="Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.">
+<img src="media/8LeKlint_iso-350.jpg" class="main_image" alt="101XL pendant" title="101XL pendant" itemprop="image"/>
+</a>
+</div>
+<div class="item">
+<a href="images/25LeKlint_iso.jpg" data-lightbox="product_image" data-title="Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.">
+<img src="media/25LeKlint_iso-350.jpg" alt="">
+</a>
+</div> <div class="item">
+<a href="images/29LeKlint_iso.jpg" data-lightbox="product_image" data-title="Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.">
+<img src="media/29LeKlint_iso-350.jpg" alt="">
+</a>
+</div> <div class="item">
+<a href="images/28LeKlint_iso.jpg" data-lightbox="product_image" data-title="Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.">
+<img src="media/28LeKlint_iso-350.jpg" alt="">
+</a>
+</div> </div>
+<div class="visible-xs">
+<a class="left carousel-control" href="#product-image-carousel" data-slide="prev">
+<span class="glyphicon glyphicon-chevron-left"></span>
+</a>
+<a class="right carousel-control" href="#product-image-carousel" data-slide="next">
+<span class="glyphicon glyphicon-chevron-right"></span>
+</a>
+</div> </div>
+<div class="additional_images hidden-xs">
+<ol class="carousel-indicators">
+<li class="active" data-slide-to="0" data-target="#product-image-carousel">
+<img src="media/8LeKlint_iso-40.jpg" alt="">
+</li>
+<li class="active" data-target="#product-image-carousel" data-slide-to="1">
+<img src="media/25LeKlint_iso-40.jpg" alt="">
+</li> <li class="active" data-target="#product-image-carousel" data-slide-to="2">
+<img src="media/29LeKlint_iso-40.jpg" alt="">
+</li> <li class="active" data-target="#product-image-carousel" data-slide-to="3">
+<img src="media/28LeKlint_iso-40.jpg" alt="">
+</li> </ol>
+</div>
+ 
+<div class="some_links">
+<div class="some_links__inner">
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html" class="some_link" id="product_info_share_facebook" target="_blank" title="Facebook" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="layout/images/some/share-icons/facebookx1.png" srcset="layout/images/some/share-icons/facebookx2.png 2x" alt="Facebook"></a>
+<a href="https://twitter.com/share?text=101XL%20pendant&amp;url=https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html&amp;hashtags=FinnishDesignShop" class="some_link" id="product_info_share_twitter" target="_blank" title="Twitter" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="layout/images/some/share-icons/twitterx1.png" srcset="layout/images/some/share-icons/twitterx2.png 2x" alt="Twitter"></a>
+<a href="https://plus.google.com/share?url=https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html" class="some_link" id="product_info_share_googleplus" target="_blank" title="Google+" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="layout/images/some/share-icons/googleplusx1.png" srcset="layout/images/some/share-icons/googleplusx2.png 2x" alt="Google+"></a>
+<a href="http://www.tumblr.com/share/link?url=https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html&amp;name=101XL%20pendant" class="some_link" id="product_info_share_tumblr" target="_blank" title="Tumblr" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="layout/images/some/share-icons/tumblrx1.png" srcset="layout/images/some/share-icons/tumblrx2.png 2x" alt="Tumblr"></a>
+<a href="https://www.pinterest.com/pin/create/button/?url=https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html&media=https%3A%2F%2Fwww.finnishdesignshop.com%2Fimages%2F8LeKlint_iso.jpg&description=101XL%20pendant"" class="some_link" id="product_info_share_pinterest" target="_blank" title="Pinterest" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="layout/images/some/share-icons/pinterestx1.png" srcset="layout/images/some/share-icons/pinterestx2.png 2x" alt="Pinterest"></a>
+
+						<a href="javascript:void(0);" class="some_link" id="product_info_share_link" title="Copy link"><img src="layout/images/some/share-icons/mailx1.png" srcset="layout/images/some/share-icons/mailx2.png 2x" alt="Email"></a>
+					</div>
+					<input type="text" value="https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html" class="product_info-social__share_link-input form-control input-sm hidden" id="product_info_share_link_input">
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-5">
+				<div class="well text-center">
+					<form action="https://www.finnishdesignshop.com/lighting-pendants-101xl-pendant-p-3543.html?action=add_product" class="form-horizontal" method="post" role="form" id="add_to_cart_form">
+						<input type="hidden" name="csrf_token" value="z32QQmGtKak0oOxls/DFu/eJAqCtkLphR2IGJglLUfk=">						<h1 class="hidden-xs" itemprop="name"><span class="custom-underline">101XL pendant</span></h1>
+						<ul class="list-unstyled text-center hidden-xs manufacturer-info">
+						 
+						  <li>Manufacturer: <span itemprop="brand"><a href="https://www.finnishdesignshop.com/Le_Klint-m-96.html">Le Klint</a></span></li><li>Design: <a href="https://www.finnishdesignshop.com/Kaare_Klint-d-239.html">Kaare Klint</a></li>						</ul>
+						<hr class="hidden-xs">
+							<fieldset class="text-left">
+								
+																
+								<div class="form-group quantity">
+									<label for="quantity" class="col-xs-5 control-label">Quantity:</label>
+									<div class="col-xs-7">
+									  <input type="number" name="quantity" id="quantity" class="form-control maara" placeholder="kpl" value="1" min="1" max="500" data-input="qty-buttons" data-enforce-max="0" data-change-after-input="800" data-max-warning="If you wish to purchase more than 500 items, please contact our Customer Service.">
+									</div>
+								</div>
+								
+								<div class="form-group availability">
+									<label for="inputEmail3" class="col-xs-5 control-label ">Availability:</label>
+									<div class="col-xs-7 delivery">
+									  <p id="delivery">2-3 weeks</p>									</div>
+								</div>
+
+								<div id="estimator-error" class="form-group" style="display:none"></div>
+
+								<div class="form-group shipping-to" style="display:none;">
+									<div class="col-xs-5">
+																					<label class="control-label" for="product-shipping-info-link">Shipping to:</label>
+																			</div>
+
+									<div class="col-xs-7">
+																					<p class="toimitustiedot"><span style='opacity: 0;' id="product-shipping-info-link"></span></p><br>
+																			</div>
+								</div>
+								<div class="clearfix"></div>
+							</fieldset>
+							<div class="price">
+								<hr>
+																	<img style="position:absolute;width:26px;" id="price-spinner" src='https://www.finnishdesignshop.com/layout/images/ui/ajax-loader2.gif' alt='...'>
+																<p style="height: 18px;">
+									<span id="price"><noscript>1 096,00&nbsp;&euro;<br></noscript><span style='opacity:0;' class='price-localized' data-price_id='1/usd' data-product_id='3543' >$1,202.00</span><span style='opacity:0;' class='price-localized' data-price_id='1/eur' data-product_id='3543' >1,096.00&nbsp;&euro;</span><span style='opacity:0;' class='price-localized' data-price_id='1/gbp' data-product_id='3543' >&pound;958.00</span><span style='opacity:0;' class='price-localized' data-price_id='1/aud' data-product_id='3543' >AU$1,584.00</span><span style='opacity:0;' class='price-localized' data-price_id='1/cad' data-product_id='3543' >C$1,671.00</span><span style='opacity:0;' class='price-localized' data-price_id='1/chf' data-product_id='3543' >CHF&nbsp;1,206.00</span><span style='opacity:0;' class='price-localized' data-price_id='1/jpy' data-product_id='3543' >&yen; 131,022</span><span style='opacity:0;' class='price-localized' data-price_id='1/sgd' data-product_id='3543' >SG$&nbsp;1,677.00</span><span style='opacity:0;' class='price-localized' data-price_id='2/usd' data-product_id='3543' >$969.00</span><span style='opacity:0;' class='price-localized' data-price_id='2/eur' data-product_id='3543' >884.00&nbsp;&euro;</span><span style='opacity:0;' class='price-localized' data-price_id='2/gbp' data-product_id='3543' >&pound;773.00</span><span style='opacity:0;' class='price-localized' data-price_id='2/aud' data-product_id='3543' >AU$1,277.00</span><span style='opacity:0;' class='price-localized' data-price_id='2/cad' data-product_id='3543' >C$1,348.00</span><span style='opacity:0;' class='price-localized' data-price_id='2/chf' data-product_id='3543' >CHF&nbsp;973.00</span><span style='opacity:0;' class='price-localized' data-price_id='2/jpy' data-product_id='3543' >&yen; 105,663</span><span style='opacity:0;' class='price-localized' data-price_id='2/sgd' data-product_id='3543' >SG$&nbsp;1,353.00</span></span>
+									<span class="price__vat-info" style="opacity: 0;padding-left:.5em;" data-personalize="price_vat_info"></span>
+								</p>
+								<hr>
+							</div>
+							<input type="hidden" name="products_id" value="3543" />
+							
+							
+						<span  itemprop="offers" itemscope itemtype="http://schema.org/Offer"><link itemprop="availability" href="http://schema.org/InStock" /><meta itemprop="priceCurrency" content="EUR" /><meta itemprop="price" content="1096.00"></span><button type="submit" name="submit_cart" value="add_product" class="btn btn-primary btn-block btn-lg" id="btn_add_to_cart" style="margin-bottom: 10px">Add to Cart</button><a data-toggle="modal" href="#request_a_quote" class="btn btn-primary btn-block btn-lg" style="display: none" id="btn_request_a_quote">Request a quote</a>
+	
+							<div style="display: none" id="mw-estimator-info" data-loading-content="&lt;img style=&quot;width:26px;&quot; src=&quot;layout/images/ui/ajax-loader2.gif&quot; alt=&quot;...&quot;&gt;&lt;br&gt;Calculating shipping to China."data-loading-error="Could not calculate shipping cost. Please contact Customer Service."></div>
+							<p class="toimitustiedot" style="margin-top: 10px"><a data-toggle="modal" href="#toimitustiedot">Shipping & Delivery</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8">
+				<article>
+					<div class="h2">Description</div>
+					<span itemprop="description"><p>"The Lantern" a modern LE KLINT classic has grown. The bestseller LE KLINT 101, designed by Kaare Klint, is now available in a XL-version. It features a brushed steel suspension uniquely designed for this lamp.</p></span>
+					<dl class="dl-inline">
+						  <dt>Manufacturer</dt><dd><a href="https://www.finnishdesignshop.com/Le_Klint-m-96.html">Le Klint</a></dd><dt>Design</dt><dd><a href="https://www.finnishdesignshop.com/Kaare_Klint-d-239.html">Kaare Klint</a></dd>					</dl>
+					
+					<dl class="dl-inline">
+						<dt>Size</dt><dd>Diameter 55 cm, height 70 cm</dd><dt>Material</dt><dd>Plastic foil</dd><dt>Light source</dt><dd>Max. 100 W (low-energy light bulb included)</dd><dt>Mounting</dt><dd>Cable length: 5 m. Canopy: Included.</dd>					</dl>
+
+										
+				</article>
+			</div>
+			<div class="col-md-4">
+								<hr>
+					<div class="panel panel-plain text-center panel--product-info">
+						<div class="panel-heading">
+							<h4>How can we help you?</h4>
+						</div>
+						<div class="panel-body">
+							<p>Contact our customer service:<br>
+<strong><a href="tel:+358207432530">Tel. +358 20 743 2530</a></strong><br>
+Mon&ndash;Fri 9:00&ndash;16:30 (GMT+3)<br>
+<strong><a href="/cdn-cgi/l/email-protection#375e59515877515e59595e445f5352445e5059445f58471954585a"><span class="__cf_email__" data-cfemail="fa93949c95ba9c9394949389929e9f89939d948992958ad4999597">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></strong></p>						</div>
+					</div>
+				<hr>
+			</div>
+			
+		</div>
+		
+		<hr class="hidden-sm hidden-xs">
+		
+		<section class="related-products product-list text-center">
+		
+				<section class="related-products product-list text-center relations-init" data-carousel_container_for="addon_products">
+		<h3>Add-ons</h3>
+		<div class="responsive-carousel product_relations_carousel" id="addon_products" data-relations_carousel_ajax="1" data-relation_type="b8da3968c1b174716d986f0c40f3daf424b1deed85fac6b113d68ceb0f67d6a7" data-product_id="3543" data-is_hidden='1'></div>
+	</section>
+	<section class="related-products product-list text-center relations-init" data-carousel_container_for="associative_products">
+		<h3>See other colour options</h3>
+		<div class="responsive-carousel product_relations_carousel" id="associative_products" data-relations_carousel_ajax="1" data-relation_type="b78edb839dbb0dd89fdda1a86553500e323731b00f6e2eb9ae0e9ec6dcec6e55" data-product_id="3543" data-is_hidden='1'></div>
+	</section>
+	<section class="related-products product-list text-center relations-init" data-carousel_container_for="family_products">
+		<h3>Other products in this product family</h3>
+		<div class="responsive-carousel product_relations_carousel" id="family_products" data-relations_carousel_ajax="1" data-relation_type="bc3078542b9d0a76d4f49802e7f4e6172f3de20f4ef36082cb2ff76e2f3d4588" data-product_id="3543" data-is_hidden='1'></div>
+	</section>
+	<section class="related-products product-list text-center relations-init" data-carousel_container_for="recommended_products">
+		<h3>We recommend</h3>
+		<div class="responsive-carousel product_relations_carousel" id="recommended_products" data-relations_carousel_ajax="1" data-relation_type="1ff415ccc41598942b4b4ddca8a1b26880a8aec81aa2ba5a5815d271c4381cfc" data-product_id="3543" data-is_hidden='1'></div>
+	</section>
+	<section class="related-products product-list text-center relations-init" data-carousel_container_for="also_bought_products">
+		<h3>Other customers also bought</h3>
+		<div class="responsive-carousel product_relations_carousel" id="also_bought_products" data-relations_carousel_ajax="1" data-relation_type="b2f57a4df752725e75e871bf4d5d9a92dedd01e81a2365ddeeaae6b8730fa91b" data-product_id="3543" data-is_hidden='1'></div>
+	</section>
+
+<div data-depends='#also_bought_products' data-depends-value='data:is_hidden=1' data-has_ajax_carousel_dependency='1'>
+	<section class="related-products product-list text-center relations-init" data-carousel_container_for="popular_products">
+		<h3>Popular right now</h3>
+		<div class="responsive-carousel product_relations_carousel" id="popular_products" data-relations_carousel_ajax="1" data-relation_type="9a88ccde84338e660fdc01706a1d9019df922d35bdcd6ef5405e73417294a3d6" data-product_id="3543">
+		</div><!-- /#popular_products -->
+	</section>
+</div>
+
+		</section>
+		<hr class="top-over">
+		<div class="bottom-view-all-link text-center">
+					<span>See more products: <a href="https://www.finnishdesignshop.com/lighting-pendants-c-897_693.html">Pendants</a> | <a href="https://www.finnishdesignshop.com/lighting-c-897.html">Lighting</a></span>				
+				  </div><hr>	</main>
+	
+				<!-- Modal toimitustiedot -->
+	<div class="modal fade" id="toimitustiedot" tabindex="-1" role="dialog" aria-labelledby="toimitustiedot" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Shipping & Delivery</h4>
+				</div>
+				<div class="modal-body">
+					
+					<p><strong>Do you ship to my country?</strong></p>
+
+					<p>We ship worldwide to over 180 countries. You can select your shipping destination at the top
+					left corner of our website.</p>
+					
+					<p><strong>What does the shipping cost?</strong></p>
+
+					<p>&bull; European Union (EU) Countries, Norway &amp; Switzerland<br>
+					Currently, we offer free standard shipping on all orders over <span data-price_type="free_shipping"><span data-currency_symbol_left="eur"></span><span data-currency="eur">150</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span>. If the total value of the
+					order is less than <span data-price_type="free_shipping"><span data-currency_symbol_left="eur"></span><span data-currency="eur">150</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span>, the shipping cost will be <span data-price_type="convert"><span data-currency_symbol_left="eur"></span><span data-currency="eur">7,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span>&ndash;<span data-price_type="convert"><span data-currency_symbol_left="eur"></span><span data-currency="eur">14,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span> depending on the
+					weight and volume of the items.</p>
+
+					<p>&bull; International shipping<br>
+					For non-European Union countries the shipping cost, starting from <span data-price_type="convert"><span data-currency_symbol_left="eur"></span><span data-currency="eur">7,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span>, is based on the
+					destination, weight and volume of the parcel. The shipping cost for each item is displayed on the
+					product page. For bulky and oversized items &ndash; such as sofas, lounge chairs, dining tables
+					etc. &ndash; you may request a shipping quote by filling in the form on the product page. We will
+					provide you with a quote in two business days.</p>
+
+					<p><strong>What shipping methods are available?</strong></p>
+
+					<p>We offer the following shipping methods:</p>
+
+					<p>&bull; DHL Global Mail, starting from <span data-price_type="convert"><span data-currency_symbol_left="eur"></span><span data-currency="eur">7,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span><br>
+					Your order will be shipped to the delivery address or local post office via DHL Global Mail.
+					The shipping cost is based on the destination, weight and volume of the parcel and will be
+					calculated automatically.</p>
+
+					<p>
+					Europe: please allow 4&ndash;8 business days for your order to arrive.<br>
+					North America: please allow 5&ndash;9 business days for your order to arrive.<br>
+					Australia: please allow 10&ndash;15 business days for your order to arrive.<br>
+					Rest of the world: please allow 5&ndash;15 business days for your order to arrive.
+					</p>
+
+					<p>You may be able to track your order within 24-48 hours after it has been processed at the
+					local DHL facility. Please note that the availability of the tracking information depends on
+					the destination country. DHL does not offer tracking for orders that are delivered by the local
+					postal service. DHL Global Mail is available for small parcels only.</p>
+
+					<p>&bull; UPS Standard (Europe), <span data-price_type="convert"><span data-currency_symbol_left="eur"></span><span data-currency="eur">14,90</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span><br>
+					Your order will be shipped to the delivery address via UPS Standard. Please allow 2&ndash;7 business
+					days for your order to arrive. The delivery time depends on the shipping destination and you will
+					see the estimated delivery date at checkout. Deliveries are made between Monday to Friday during
+					regular business hours.</p>
+
+					<p>&bull; UPS Expedited (for international orders)<br>
+					Your order will be shipped to the delivery address via UPS Expedited. Please allow 1&ndash;2 weeks
+					for your order to arrive. The shipping cost is based on the destination, weight and volume of the
+					parcel and will be calculated automatically. The delivery time depends on the shipping destination
+					and you will see the estimated delivery date at checkout. Deliveries are made between Monday to
+					Friday during regular business hours.</p>
+
+					<p>&bull; UPS Express Saver<br>
+					UPS Express Saver is the fastest shipping option available. Please allow 1&ndash;2 business days
+					for your order to arrive. The shipping cost is based on the destination, weight and volume of the
+					parcel and will be calculated automatically. You will see the estimated delivery date at checkout.
+					Deliveries are made between Monday to Friday during regular business hours. Please note that UPS
+					Express Saver is not available for all orders.</p>
+
+					<p>&bull; DSV Freight<br>
+					All bulky and oversized items &ndash; such as sofas, lounge chairs, dining tables etc. &ndash; will
+					be shipped with the DSV Freight service.</p>
+
+					<p>&bull; DSV Air Freight<br>
+					Furniture and other large items will be shipped to the delivery address via DVS Air Freight. The
+					delivery time is 6&ndash;8 business days. You will receive a tracking code by email once the order
+					has been dispatched from our warehouse. DSV delivers orders only to the street level and will call
+					you in advance to schedule a delivery appointment. All orders outside the European Union will be
+					shipped as DAP (Delivered at Place), duty unpaid.
+					</p>
+
+					<p>Europe: please allow 2&ndash;9 business days for your order to arrive. We offer free standard
+					shipping for all orders over <span data-price_type="free_shipping"><span data-currency_symbol_left="eur"></span><span data-currency="eur">150</span><span data-currency_symbol_right="eur">&nbsp;&euro;</span></span>.<br>
+					Rest of the world: The shipping cost and
+					estimated delivery date will be stated in the quote provided by our customer service.</p>
+
+					<p><strong>When will my order arrive?</strong></p>
+
+					<p>You can see the estimated delivery time for your whole order at checkout.</p>
+
+				</div>
+				<div class="modal-footer">
+					Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+			<!-- Modal exclVatInfo -->
+		<div class="modal fade" id="exclVatInfo" tabindex="-1" role="dialog" aria-labelledby="exclVatInfoLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="exclVatInfoLabel">The price does not include VAT.</h4>
+					</div>
+					<div class="modal-body">
+						The product price does not include VAT. Please note that you might be required to pay local taxes and duties on the arrival of your order, if you are shipping outside the European Union. You will receive instructions on how to pay the fees from the carrier or the local customs office.					</div>
+					<div class="modal-footer">
+						Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+				
+	<div class="modal fds addtocart" id="addtocart" tabindex="-1" role="dialog" aria-labelledby="addtocart" aria-hidden="true" data-autoclose="true">
+	  <div class="modal-dialog modal-sm">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title text-center"><span data-qty="0"></span>product added to the cart</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="row">
+	      		<div class="col-xs-5">
+	      			<img src="media/8LeKlint_iso-130.jpg" alt="101XL pendant" />
+	      		</div>
+	      		<div class="col-xs-7">
+			  		<dl>
+					  <dt>Manufacturer:</dt>
+					  <dd>Le Klint </dd>
+					  <dt>Product:</dt>
+					  <dd>101XL pendant </dd>
+					  <dt>Unit price:</dt>
+					  <dd class="price" id="minicart_price">
+					  $1,096.00					  </dd>
+					</dl>
+	      		</div>
+	      	</div>
+	      </div>
+	      <div class="modal-footer">
+	        <a href="https://www.finnishdesignshop.com/shopping_cart.php" class="btn btn-primary-inverse left" id="minicart-btn-view">View ></a>
+	        <a href="https://www.finnishdesignshop.com/checkout.php" class="btn btn-primary right" id="minicart-btn-checkout">Checkout ></a>
+	      </div>
+		  <div class="modal-footer">
+		  	
+<section class="related-products product-list text-center relations-init" data-carousel_container_for="popular_products">
+	<h3>Popular right now</h3>
+	<div class="minicart-carousel product_relations_carousel" id="popular_products_minicart" data-relations_carousel_ajax="1" data-relation_type="9a88ccde84338e660fdc01706a1d9019df922d35bdcd6ef5405e73417294a3d6" data-product_id="3543" data-preload_data="1">
+	</div>
+</section>
+<input type="hidden" id="minicart_limit" value="100">	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+			
+	
+<!-- Modal request_a_quote -->
+<div class="modal fade" id="request_a_quote" tabindex="-1" role="dialog" aria-labelledby="request_a_quote" aria-hidden="true" data-text-thank-you="Thank your for your message! We will get back to you in two business days." data-text-error="The message could not be sent. Please email us at info@finnishdesignshop.com or call us at +358-20-743 2530 Mon-Fri, 9:00-16:30 (GMT+3).">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Request a shipping quote</h4>
+            </div>
+            <div class="modal-body">
+                <p>We will calculate the shipping cost for bulky and oversized items shipped outside Europe. Please fill out the form and we will provide you with a quote in two business days. If you would like to have more information about shipping, we are happy to help you by email at <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="157c7b737a55737c7b7b7c667d7170667c727b667d7a653b767a78">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script> or by phone at +358 20 743 2530, Mon&ndash;Fri 9:00 a.m.&ndash;4:30 p.m. (GMT +3).</p>
+                <form action="request_a_quote.php" method="post" id="request_a_quote_form" role="form" accept-charset="utf-8">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="first_name">First name *</label>
+                        <input type="text" name="first_name" value="" id="entry_firstname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last name *</label>
+                        <input type="text" name="last_name" value="" id="entry_lastname" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address *</label>
+                        <input type="email" name="email" value="" id="customers_email_address" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">Phone number *</label>
+                        <input type="tel" name="tel" value="" id="entry_phone" class="form-control" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                <legend>Shipping address</legend>
+                    <div class="form-group">
+                        <label for="address1">Address line *</label>
+                        <input type="text" name="address1" value="" id="entry_street_address" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="address2" value="" id="entry_suburb" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="address3" value="" id="address3" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="postal_code">Postal code *</label>
+                        <input type="text" name="postal_code" value="" id="entry_postcode" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Town/City *</label>
+                        <input type="text" name="city" value="" id="entry_city" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select class="form-control" name="country" id="entry_country_id" required>
+                            <option value="">Please, choose your country</option><option value="250">Albania</option><option value="251">Algeria</option><option value="252">Andorra</option><option value="253">Angola</option><option value="254">Argentina</option><option value="255">Aruba</option><option value="256">Australia</option><option value="14">Austria</option><option value="257">Azerbaijan</option><option value="404">Bahamas</option><option value="258">Bahrain</option><option value="259">Bangladesh</option><option value="260">Barbados</option><option value="261">Belarus</option><option value="21">Belgium</option><option value="262">Belize</option><option value="263">Benin</option><option value="264">Bermuda</option><option value="265">Bhutan</option><option value="266">Bolivia</option><option value="267">Bosnia</option><option value="268">Botswana</option><option value="269">Brazil</option><option value="270">British Virgin Islands</option><option value="271">Brunei</option><option value="245">Bulgaria</option><option value="272">Burkina Faso</option><option value="273">Burundi</option><option value="274">Cambodia</option><option value="275">Cameroon</option><option value="276">Canada</option><option value="277">Canary Islands</option><option value="278">Cape Verde Island</option><option value="279">Cayman Islands</option><option value="280">Central African Republic</option><option value="281">Chad</option><option value="282">Chile</option><option value="283">China</option><option value="284">Colombia</option><option value="285">Congo</option><option value="286">Cook Islands</option><option value="287">Costa Rica</option><option value="246">Croatia</option><option value="55">Cyprus</option><option value="56">Czech Republic</option><option value="57">Denmark</option><option value="288">Djibouti</option><option value="289">Ecuador</option><option value="290">Egypt</option><option value="291">El Salvador</option><option value="293">Equatorial Guinea</option><option value="67">Estonia</option><option value="294">Ethiopia</option><option value="295">Fiji</option><option value="72">Finland</option><option value="73">France</option><option value="296">French Guiana</option><option value="297">French Polynesia</option><option value="298">Gabon</option><option value="299">Gambia</option><option value="300">Georgia</option><option value="81" selected>Germany</option><option value="301">Ghana</option><option value="302">Gibraltar</option><option value="84">Greece</option><option value="303">Greenland</option><option value="304">Grenada</option><option value="305">Guadeloupe</option><option value="306">Guam</option><option value="307">Guatemala</option><option value="308">Guinea</option><option value="309">Guinea-Bissau</option><option value="310">Guyana</option><option value="311">Haiti</option><option value="313">Honduras</option><option value="314">Hong Kong</option><option value="97">Hungary</option><option value="315">Iceland</option><option value="316">India</option><option value="317">Indonesia</option><option value="318">Iraq</option><option value="103">Ireland</option><option value="319">Israel</option><option value="105">Italy</option><option value="320">Japan</option><option value="321">Jordan</option><option value="322">Kenya</option><option value="323">Kiribati</option><option value="324">Korea South</option><option value="325">Kuwait</option><option value="326">Laos</option><option value="117">Latvia</option><option value="327">Lebanon</option><option value="328">Lesotho</option><option value="329">Liberia</option><option value="330">Libya</option><option value="122">Liechtenstein</option><option value="123">Lithuania</option><option value="124">Luxembourg</option><option value="331">Macau</option><option value="332">Madagascar</option><option value="334">Malawi</option><option value="335">Malaysia</option><option value="336">Maldives</option><option value="337">Mali</option><option value="132">Malta</option><option value="338">Marshall Islands</option><option value="339">Martinique</option><option value="340">Mauritania</option><option value="341">Mauritius</option><option value="342">Mexico</option><option value="343">Micronesia Federated States of</option><option value="344">Monaco</option><option value="345">Mongolia</option><option value="346">Montserrat</option><option value="347">Morocco</option><option value="348">Mozambique</option><option value="349">Namibia</option><option value="350">Nepal</option><option value="150">Netherlands</option><option value="351">Netherlands Antilles</option><option value="352">New Caledonia</option><option value="353">New Zealand</option><option value="354">Nicaragua</option><option value="355">Niger</option><option value="356">Nigeria</option><option value="357">Norfolk Island</option><option value="160">Norway</option><option value="358">Oman</option><option value="359">Pakistan</option><option value="360">Panama</option><option value="361">Papua New Guinea</option><option value="362">Paraguay</option><option value="363">Peru</option><option value="364">Philippines</option><option value="170">Poland</option><option value="171">Portugal</option><option value="365">Puerto Rico</option><option value="366">Qatar</option><option value="367">Reunion</option><option value="244">Romania</option><option value="368">Russia</option><option value="369">Rwanda</option><option value="370">Samoa</option><option value="371">San Marino</option><option value="372">Saudi Arabia</option><option value="373">Senegal</option><option value="374">Serbia</option><option value="375">Seychelles</option><option value="376">Sierra Leone</option><option value="377">Singapore</option><option value="189">Slovakia (Slovak Republic)</option><option value="190">Slovenia</option><option value="378">Solomon Islands</option><option value="379">South Africa</option><option value="195">Spain</option><option value="380">Sri Lanka</option><option value="381">St. Kitts and Nevis</option><option value="382">St. Lucia</option><option value="383">Suriname</option><option value="384">Swaziland</option><option value="203">Sweden</option><option value="204">Switzerland</option><option value="385">Taiwan</option><option value="386">Tanzania</option><option value="387">Thailand</option><option value="388">Togo</option><option value="389">Tonga</option><option value="390">Tunisia</option><option value="391">Turkey</option><option value="392">Turkmenistan</option><option value="393">Tuvalu</option><option value="394">Uganda</option><option value="395">Ukraine</option><option value="396">United Arab Emirates</option><option value="222">United Kingdom</option><option value="248">United States</option><option value="397">Uruguay</option><option value="398">Vanuatu</option><option value="399">Vatican City State</option><option value="400">Venezuela</option><option value="401">Vietnam</option><option value="402">Zambia</option><option value="403">Zimbabwe</option>                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Products</legend>
+                    <div id="request-quote-rows"></div>
+                    <script type="text/x-tmpl" id="tmpl-request-quote-row">
+                        {% for (var i = 0; i < o.length; i++) { %}
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <label for="product_name_{%= o[i].sku %}">Description *</label>
+                                        <input type="text" name="product_name[]" value="{%= o[i].name %}" id="product_name_{%= o[i].sku %}" class="form-control" required>
+                                        <input type="hidden" name="product_sku[]" value="{%= o[i].sku %}" id="product_sku">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label for="product_qty_{%= o[i].sku %}">Quantity *</label>
+                                        <input type="number" name="product_qty[]" value="{%= o[i].qty %}" id="product_qty_{%= o[i].sku %}" class="form-control" data-input="qty-buttons" required>
+                                    </div>
+                                </div>
+                            </div>
+                        {% } %}
+                    </script>
+                    <div class="form-group">
+                        <label for="info">Additional information</label>
+                        <textarea class="form-control" rows="5" id="info" name="info"></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="h_7654rt6y7ujki87_o987ytghji87y" tabindex="-1" value=""></div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	
+<meta name='cXenseParse:ale-product-price-amount' content='1096'>
+	
+			<section class="pre-footer clearfix">
+                            <div class="row social fill-sm">
+                    <div class="col-sm-8 left">
+                        
+<div class="well-sm well-inverse text-center">
+    <div class="row">
+        <div class="col-sm-6 col-text">
+            <h4 class="brace">Email Signup</h4>
+            <p>Subscribe to our <strong>free newsletter</strong> and be first to hear about new products, interesting people and events.</p>
+        </div>
+        <div class="col-sm-6 col-divider col-form">
+            <form class="form-inline" name="newsletter" id="order_newsletter_form" action="newsletters.php" method="post">
+                <input type="hidden" name="csrf_token" value="z32QQmGtKak0oOxls/DFu/eJAqCtkLphR2IGJglLUfk=">                <div id="message"></div>
+                <div class="form-group newsletter-form-inputs">
+                    <div class="input-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email address" autocomplete="off">
+                        <span class="input-group-btn">
+                        <button type="submit" value="Go" class="btn btn-default">Go</button>    
+                      </span>
+                    </div>
+                </div>
+                <div class="form-group newsletter-form-inputs pts">
+                    <div class="form-group row">
+                        <div class="col-xs-12 text-center" style="line-height: 1">
+                            <label for="newsletter-country">Your country:</label>
+                            <div class="text-like-select">
+                                <span class="text-like-select__label loading">...</span>
+                                <select id="newsletter-country" name="country" data-country-preselect-by-content>
+                                                                    <option value="AL">Albania</option>
+                                                                    <option value="DZ">Algeria</option>
+                                                                    <option value="AD">Andorra</option>
+                                                                    <option value="AO">Angola</option>
+                                                                    <option value="AR">Argentina</option>
+                                                                    <option value="AW">Aruba</option>
+                                                                    <option value="AU">Australia</option>
+                                                                    <option value="AT">Austria</option>
+                                                                    <option value="AZ">Azerbaijan</option>
+                                                                    <option value="BS">Bahamas</option>
+                                                                    <option value="BH">Bahrain</option>
+                                                                    <option value="BD">Bangladesh</option>
+                                                                    <option value="BB">Barbados</option>
+                                                                    <option value="BY">Belarus</option>
+                                                                    <option value="BE">Belgium</option>
+                                                                    <option value="BZ">Belize</option>
+                                                                    <option value="BJ">Benin</option>
+                                                                    <option value="BM">Bermuda</option>
+                                                                    <option value="BT">Bhutan</option>
+                                                                    <option value="BO">Bolivia</option>
+                                                                    <option value="BA">Bosnia</option>
+                                                                    <option value="BW">Botswana</option>
+                                                                    <option value="BR">Brazil</option>
+                                                                    <option value="VG">British Virgin Islands</option>
+                                                                    <option value="BN">Brunei</option>
+                                                                    <option value="BG">Bulgaria</option>
+                                                                    <option value="BF">Burkina Faso</option>
+                                                                    <option value="BI">Burundi</option>
+                                                                    <option value="KH">Cambodia</option>
+                                                                    <option value="CM">Cameroon</option>
+                                                                    <option value="CA">Canada</option>
+                                                                    <option value="IC">Canary Islands</option>
+                                                                    <option value="CV">Cape Verde Island</option>
+                                                                    <option value="KY">Cayman Islands</option>
+                                                                    <option value="CF">Central African Republic</option>
+                                                                    <option value="TD">Chad</option>
+                                                                    <option value="CL">Chile</option>
+                                                                    <option value="CN">China</option>
+                                                                    <option value="CO">Colombia</option>
+                                                                    <option value="CG">Congo</option>
+                                                                    <option value="CK">Cook Islands</option>
+                                                                    <option value="CR">Costa Rica</option>
+                                                                    <option value="HR">Croatia</option>
+                                                                    <option value="CY">Cyprus</option>
+                                                                    <option value="CZ">Czech Republic</option>
+                                                                    <option value="DK">Denmark</option>
+                                                                    <option value="DJ">Djibouti</option>
+                                                                    <option value="EC">Ecuador</option>
+                                                                    <option value="EG">Egypt</option>
+                                                                    <option value="SV">El Salvador</option>
+                                                                    <option value="GQ">Equatorial Guinea</option>
+                                                                    <option value="EE">Estonia</option>
+                                                                    <option value="ET">Ethiopia</option>
+                                                                    <option value="FJ">Fiji</option>
+                                                                    <option value="FI">Finland</option>
+                                                                    <option value="FR">France</option>
+                                                                    <option value="GF">French Guiana</option>
+                                                                    <option value="PF">French Polynesia</option>
+                                                                    <option value="GA">Gabon</option>
+                                                                    <option value="GM">Gambia</option>
+                                                                    <option value="GE">Georgia</option>
+                                                                    <option value="DE">Germany</option>
+                                                                    <option value="GH">Ghana</option>
+                                                                    <option value="GI">Gibraltar</option>
+                                                                    <option value="GR">Greece</option>
+                                                                    <option value="GL">Greenland</option>
+                                                                    <option value="GD">Grenada</option>
+                                                                    <option value="GP">Guadeloupe</option>
+                                                                    <option value="GU">Guam</option>
+                                                                    <option value="GT">Guatemala</option>
+                                                                    <option value="GN">Guinea</option>
+                                                                    <option value="GW">Guinea-Bissau</option>
+                                                                    <option value="GY">Guyana</option>
+                                                                    <option value="HT">Haiti</option>
+                                                                    <option value="HN">Honduras</option>
+                                                                    <option value="HK">Hong Kong</option>
+                                                                    <option value="HU">Hungary</option>
+                                                                    <option value="IS">Iceland</option>
+                                                                    <option value="IN">India</option>
+                                                                    <option value="ID">Indonesia</option>
+                                                                    <option value="IQ">Iraq</option>
+                                                                    <option value="IE">Ireland</option>
+                                                                    <option value="IL">Israel</option>
+                                                                    <option value="IT">Italy</option>
+                                                                    <option value="JP">Japan</option>
+                                                                    <option value="JO">Jordan</option>
+                                                                    <option value="KE">Kenya</option>
+                                                                    <option value="KI">Kiribati</option>
+                                                                    <option value="KR">Korea South</option>
+                                                                    <option value="KW">Kuwait</option>
+                                                                    <option value="LA">Laos</option>
+                                                                    <option value="LV">Latvia</option>
+                                                                    <option value="LB">Lebanon</option>
+                                                                    <option value="LS">Lesotho</option>
+                                                                    <option value="LR">Liberia</option>
+                                                                    <option value="LY">Libya</option>
+                                                                    <option value="LI">Liechtenstein</option>
+                                                                    <option value="LT">Lithuania</option>
+                                                                    <option value="LU">Luxembourg</option>
+                                                                    <option value="MO">Macau</option>
+                                                                    <option value="MG">Madagascar</option>
+                                                                    <option value="MW">Malawi</option>
+                                                                    <option value="MY">Malaysia</option>
+                                                                    <option value="MV">Maldives</option>
+                                                                    <option value="ML">Mali</option>
+                                                                    <option value="MT">Malta</option>
+                                                                    <option value="MH">Marshall Islands</option>
+                                                                    <option value="MQ">Martinique</option>
+                                                                    <option value="MR">Mauritania</option>
+                                                                    <option value="MU">Mauritius</option>
+                                                                    <option value="MX">Mexico</option>
+                                                                    <option value="FM">Micronesia Federated States of</option>
+                                                                    <option value="MC">Monaco</option>
+                                                                    <option value="MN">Mongolia</option>
+                                                                    <option value="MS">Montserrat</option>
+                                                                    <option value="MA">Morocco</option>
+                                                                    <option value="MZ">Mozambique</option>
+                                                                    <option value="NA">Namibia</option>
+                                                                    <option value="NP">Nepal</option>
+                                                                    <option value="NL">Netherlands</option>
+                                                                    <option value="AN">Netherlands Antilles</option>
+                                                                    <option value="NC">New Caledonia</option>
+                                                                    <option value="NZ">New Zealand</option>
+                                                                    <option value="NI">Nicaragua</option>
+                                                                    <option value="NE">Niger</option>
+                                                                    <option value="NG">Nigeria</option>
+                                                                    <option value="NF">Norfolk Island</option>
+                                                                    <option value="NO">Norway</option>
+                                                                    <option value="OM">Oman</option>
+                                                                    <option value="PK">Pakistan</option>
+                                                                    <option value="PA">Panama</option>
+                                                                    <option value="PG">Papua New Guinea</option>
+                                                                    <option value="PY">Paraguay</option>
+                                                                    <option value="PE">Peru</option>
+                                                                    <option value="PH">Philippines</option>
+                                                                    <option value="PL">Poland</option>
+                                                                    <option value="PT">Portugal</option>
+                                                                    <option value="PR">Puerto Rico</option>
+                                                                    <option value="QA">Qatar</option>
+                                                                    <option value="RE">Reunion</option>
+                                                                    <option value="RO">Romania</option>
+                                                                    <option value="RU">Russia</option>
+                                                                    <option value="RW">Rwanda</option>
+                                                                    <option value="WS">Samoa</option>
+                                                                    <option value="SM">San Marino</option>
+                                                                    <option value="SA">Saudi Arabia</option>
+                                                                    <option value="SN">Senegal</option>
+                                                                    <option value="RS">Serbia</option>
+                                                                    <option value="SC">Seychelles</option>
+                                                                    <option value="SL">Sierra Leone</option>
+                                                                    <option value="SG">Singapore</option>
+                                                                    <option value="SK">Slovakia (Slovak Republic)</option>
+                                                                    <option value="SI">Slovenia</option>
+                                                                    <option value="SB">Solomon Islands</option>
+                                                                    <option value="ZA">South Africa</option>
+                                                                    <option value="ES">Spain</option>
+                                                                    <option value="LK">Sri Lanka</option>
+                                                                    <option value="KN">St. Kitts and Nevis</option>
+                                                                    <option value="LC">St. Lucia</option>
+                                                                    <option value="SR">Suriname</option>
+                                                                    <option value="SZ">Swaziland</option>
+                                                                    <option value="SE">Sweden</option>
+                                                                    <option value="CH">Switzerland</option>
+                                                                    <option value="TW">Taiwan</option>
+                                                                    <option value="TZ">Tanzania</option>
+                                                                    <option value="TH">Thailand</option>
+                                                                    <option value="TG">Togo</option>
+                                                                    <option value="TO">Tonga</option>
+                                                                    <option value="TN">Tunisia</option>
+                                                                    <option value="TR">Turkey</option>
+                                                                    <option value="TM">Turkmenistan</option>
+                                                                    <option value="TV">Tuvalu</option>
+                                                                    <option value="UG">Uganda</option>
+                                                                    <option value="UA">Ukraine</option>
+                                                                    <option value="AE">United Arab Emirates</option>
+                                                                    <option value="GB">United Kingdom</option>
+                                                                    <option value="US">United States</option>
+                                                                    <option value="UY">Uruguay</option>
+                                                                    <option value="VU">Vanuatu</option>
+                                                                    <option value="VA">Vatican City State</option>
+                                                                    <option value="VE">Venezuela</option>
+                                                                    <option value="VN">Vietnam</option>
+                                                                    <option value="ZM">Zambia</option>
+                                                                    <option value="ZW">Zimbabwe</option>
+                                                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>                    </div>
+                    <div class="col-sm-4 fill-sm right">
+                        <div class="well-sm text-center fill-sm">
+                            <div class="row">
+                                <div class="col-xs-5 col-sm-4 col-text">
+                                    <h4>Follow</h4>
+                                </div>
+                                <div class="col-xs-7 col-sm-8 col-divider col-icons">
+                                    <a href="https://www.facebook.com/FinnishDesignShop" onclick="_gaq.push(['_trackEvent', 'Share', 'FaceBook']);" id="facebook" target="_blank" title="Facebook">
+                                        <img src="ext/ui/images/fds_facebook@2x.png" alt="Facebook" width="25" height="25" />
+                                    </a>
+                                    <a href="https://www.pinterest.com/fdspins/" onclick="_gaq.push(['_trackEvent', 'Share', 'Pinterest']);" id="pinterest" target="_blank" title="Pinterest">
+                                        <img src="ext/ui/images/fds_pinterest@2x.png" alt="Pinterest" width="25" height="25" />
+                                    </a>
+                                    <a href="https://instagram.com/finnishdesignshop/" id="instagram" target="_blank" title="Instagram">
+                                        <img src="ext/ui/images/fds_instagram@2x.png" alt="Instagram" width="25" height="25" />
+                                    </a>
+                                    <a href="https://www.finnishdesignshop.com/new_products_rss.php" onclick="_gaq.push(['_trackEvent', 'Share', 'RSS']);" id="rss" title="RSS">
+                                        <img src="ext/ui/images/fds_rss-feed@2x.png" alt="RSS" width="25" height="25" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            
+                <div class="row bottom-nav-info">
+                    <div class="col-sm-12 text-center">
+                        <nav class="navbar yamm navbar-default navbar-plain navbar-plain-info hidden-xs">
+                                  <div class="container-fluid">  
+                                      <ul class="nav navbar-nav">
+                                        <li><a href="terms_and_info2.php?p=customer_service">Help</a></li>
+                                                                                    <li><a href="terms_and_info2.php?p=contact_us">Contact</a></li>
+                                                                                <li><a href="terms_and_info2.php?p=about_us">About Us</a></li>
+                                        <li><a href="terms_and_info2.php?p=faq">FAQ</a></li> 
+                                        <li><a href="terms_and_info2.php?p=shipping_and_delivery">Shipping & Delivery</a></li> 
+                                        <li><a href="terms_and_info2.php?p=returns_and_exchanges">Returns & Exchanges</a></li> 
+                                        <li><a href="terms_and_info2.php?p=security">Security</a></li>
+                                        <li><a href="contract-sales">Contract Sales</a></li>
+                                    </ul>
+                                  </div>
+                        </nav>
+                        <div class="asiakaspalvelu visible-xs">
+                            <hr>
+                                <a href="https://www.finnishdesignshop.com/terms_and_info2.php" class="asiakaspalvelu-link">Customer Service</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="row features">
+	<div class="col-sm-4">
+		<a href="campaigns.php">
+			<img src="ext/ui/images/feature-campaign-english@2x.png" width="85" height="64" alt="See our latest campaigns" />
+		</a>
+		<a href="campaigns.php" class="feature-link"><span>See our latest<br />campaigns</span></a>
+		<div class="clearfix"></div>
+	</div>
+	<div class="col-sm-4">
+		<a href="/gift-ideas-gift-cards-c-260_366_484.html">
+			<img src="ext/ui/images/feature_lahjakortti@2x.png" width="85" height="64" alt="Remember our popular gift cards" />
+		</a>
+		<a href="/gift-ideas-gift-cards-c-260_366_484.html" class="feature-link"><span>Remember our<br>popular gift cards</span></a>
+		<div class="clearfix"></div>
+	</div>
+	<div class="col-sm-4">
+		<a href="contract-sales">
+			<img src="ext/ui/images/contract-sales@2x.png" width="85" height="64" alt="Contract sales is now open" />
+		</a>
+		<a href="contract-sales" class="feature-link"><span>Contract sales<br>for professionals</span></a>
+		<div class="clearfix"></div>
+	</div>
+</div>
+                
+            </section>
+                    </div>
+        
+        <footer class="text-center">
+            <div class="container">
+                
+                                <section class="bottom-navigation text-left">
+                    <div class="row hidden-xs">
+                    <div class="col-xs-3"><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/furniture-c-899.html" >Furniture</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/furniture-247-c-899_1506.html" >24/7</a></li><li><a href="https://www.finnishdesignshop.com/furniture-hay-can-c-899_1496.html" >Hay Can</a></li><li><a href="https://www.finnishdesignshop.com/furniture-chairs-c-899_901.html" >Chairs</a></li><li><a href="https://www.finnishdesignshop.com/furniture-tables-c-899_902.html" >Tables</a></li><li><a href="https://www.finnishdesignshop.com/furniture-lounge-poufs-c-899_41.html" >Lounge &amp; Poufs</a></li><li><a href="https://www.finnishdesignshop.com/furniture-sofas-c-899_1431.html" >Sofas</a></li><li><a href="https://www.finnishdesignshop.com/furniture-bar-stools-c-899_1460.html" >Bar stools</a></li><li><a href="https://www.finnishdesignshop.com/furniture-stools-c-899_1005.html" >Stools</a></li><li><a href="https://www.finnishdesignshop.com/furniture-bookcases-c-899_867.html" >Bookcases</a></li><li><a href="https://www.finnishdesignshop.com/furniture-muuto-stacked-c-899_1381.html" >Muuto Stacked</a></li><li><a href="https://www.finnishdesignshop.com/furniture-string-system-c-899_1095.html" >String System</a></li><li><a href="https://www.finnishdesignshop.com/furniture-string-works-c-899_1368.html" >String Works</a></li><li><a href="https://www.finnishdesignshop.com/furniture-coatracks-hooks-c-899_904.html" >Coatracks &amp; hooks</a></li><li><a href="https://www.finnishdesignshop.com/furniture-for-children-c-899_903.html" >For Children</a></li>  </ul></div><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/outdoor-c-896.html" >Outdoor</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/outdoor-outdoor-furniture-c-896_779.html" >Outdoor furniture</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-grills-grill-accessories-c-896_772.html" >Grills &amp; grill accessories</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-gardening-c-896_776.html" >Gardening</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-herbflower-pots-c-896_766.html" >Herb/flower pots</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-outdoor-lighting-c-896_787.html" >Outdoor lighting</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-bike-accessories-c-896_778.html" >Bike accessories</a></li><li><a href="https://www.finnishdesignshop.com/outdoor-bird-tables-bird-boxes-c-896_775.html" >Bird tables &amp; bird boxes</a></li>  </ul></div></div><div class="col-xs-3"><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/kitchenware-c-893.html" >Kitchenware</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/kitchenware-plantui-smart-garden-c-893_1304.html" >Plantui Smart Garden</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-saucepans-casseroles-pots-c-893_869.html" >Saucepans, casseroles &amp; pots</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-frying-pans-c-893_760.html" >Frying pans</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-cutting-boards-c-893_762.html" >Cutting boards</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-utensils-c-893_767.html" >Kitchen utensils</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-salt-pepper-c-893_765.html" >Salt &amp; pepper</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-citrus-squeezers-c-893_770.html" >Citrus squeezers</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-storage-c-893_763.html" >Kitchen storage</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-textiles-c-893_1037.html" >Kitchen textiles</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-cleaning-products-c-893_771.html" >Cleaning products</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-drinking-bottles-c-893_1458.html" >Drinking bottles</a></li><li><a href="https://www.finnishdesignshop.com/kitchenware-kitchen-accessories-c-893_1027.html" >Kitchen accessories</a></li>  </ul></div><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/lighting-c-897.html" >Lighting</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/lighting-pendants-c-897_693.html" >Pendants</a></li><li><a href="https://www.finnishdesignshop.com/lighting-table-lamps-c-897_694.html" >Table lamps</a></li><li><a href="https://www.finnishdesignshop.com/lighting-floor-lamps-c-897_695.html" >Floor lamps</a></li><li><a href="https://www.finnishdesignshop.com/lighting-task-lights-c-897_713.html" >Task lights</a></li><li><a href="https://www.finnishdesignshop.com/lighting-wall-lamps-c-897_712.html" >Wall lamps</a></li><li><a href="https://www.finnishdesignshop.com/lighting-lighting-accessories-c-897_1071.html" >Lighting accessories</a></li>  </ul></div><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/textiles-c-1468.html" >Textiles</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/textiles-artek-fabrics-c-1468_1586.html" >Artek fabrics</a></li><li><a href="https://www.finnishdesignshop.com/textiles-marimekko-fabrics-c-1468_1474.html" >Marimekko fabrics</a></li><li><a href="https://www.finnishdesignshop.com/textiles-rugs-c-1468_1469.html" >Rugs</a></li><li><a href="https://www.finnishdesignshop.com/textiles-throws-c-1468_1471.html" >Throws</a></li><li><a href="https://www.finnishdesignshop.com/textiles-cushions-c-1468_1470.html" >Cushions</a></li><li><a href="https://www.finnishdesignshop.com/textiles-bed-linen-c-1468_1472.html" >Bed linen</a></li>  </ul></div></div><div class="col-xs-3"><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/decoration-c-895.html" >Decoration</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/decoration-posters-c-895_1326.html" >Posters</a></li><li><a href="https://www.finnishdesignshop.com/decoration-wallpapers-c-895_1421.html" >Wallpapers</a></li><li><a href="https://www.finnishdesignshop.com/decoration-clocks-c-895_945.html" >Clocks</a></li><li><a href="https://www.finnishdesignshop.com/decoration-mirrors-c-895_866.html" >Mirrors</a></li><li><a href="https://www.finnishdesignshop.com/decoration-candles-c-895_941.html" >Candles</a></li><li><a href="https://www.finnishdesignshop.com/decoration-candleholders-c-895_942.html" >Candleholders</a></li><li><a href="https://www.finnishdesignshop.com/decoration-vases-c-895_943.html" >Vases</a></li><li><a href="https://www.finnishdesignshop.com/decoration-bowls-c-895_944.html" >Bowls</a></li><li><a href="https://www.finnishdesignshop.com/decoration-note-boards-magnets-c-895_690.html" >Note boards &amp; magnets</a></li><li><a href="https://www.finnishdesignshop.com/decoration-wall-elements-c-895_952.html" >Wall elements</a></li><li><a href="https://www.finnishdesignshop.com/decoration-accessories-c-895_1026.html" >Accessories</a></li><li><a href="https://www.finnishdesignshop.com/decoration-smoke-alarms-c-895_1123.html" >Smoke alarms</a></li><li><a href="https://www.finnishdesignshop.com/decoration-extension-cords-c-895_1094.html" >Extension cords</a></li><li><a href="https://www.finnishdesignshop.com/decoration-home-office-c-895_1143.html" >Home office</a></li><li><a href="https://www.finnishdesignshop.com/decoration-trash-bins-c-895_1464.html" >Trash bins</a></li><li><a href="https://www.finnishdesignshop.com/decoration-mobiles-c-895_1150.html" >Mobiles</a></li><li><a href="https://www.finnishdesignshop.com/decoration-stationery-c-895_1160.html" >Stationery</a></li>  </ul></div><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/storage-c-1476.html" >Storage</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/storage-baskets-c-1476_1478.html" >Baskets</a></li><li><a href="https://www.finnishdesignshop.com/storage-magazine-racks-c-1476_1477.html" >Magazine racks</a></li><li><a href="https://www.finnishdesignshop.com/storage-shelves-c-1476_1480.html" >Shelves</a></li><li><a href="https://www.finnishdesignshop.com/storage-small-storage-c-1476_1479.html" >Small storage</a></li><li><a href="https://www.finnishdesignshop.com/storage-storage-furniture-c-1476_1483.html" >Storage furniture</a></li><li><a href="https://www.finnishdesignshop.com/storage-lassen-frame-c-1476_1482.html" >By Lassen Frame</a></li><li><a href="https://www.finnishdesignshop.com/storage-coat-hangers-c-1476_1481.html" >Coat hangers</a></li>  </ul></div><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/tableware-c-894.html" >Tableware</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/tableware-iittala-issey-miyake-c-894_1467.html" >Iittala X Issey Miyake</a></li><li><a href="https://www.finnishdesignshop.com/tableware-glasses-c-894_781.html" >Glasses</a></li><li><a href="https://www.finnishdesignshop.com/tableware-dishware-c-894_780.html" >Dishware</a></li><li><a href="https://www.finnishdesignshop.com/tableware-cutlery-c-894_782.html" >Cutlery</a></li><li><a href="https://www.finnishdesignshop.com/tableware-serving-c-894_1029.html" >Serving</a></li><li><a href="https://www.finnishdesignshop.com/tableware-carafes-pitchers-c-894_784.html" >Carafes &amp; Pitchers</a></li><li><a href="https://www.finnishdesignshop.com/tableware-trivets-c-894_785.html" >Trivets</a></li><li><a href="https://www.finnishdesignshop.com/tableware-trays-c-894_789.html" >Trays</a></li><li><a href="https://www.finnishdesignshop.com/tableware-serving-dishes-c-894_790.html" >Serving dishes</a></li><li><a href="https://www.finnishdesignshop.com/tableware-coffee-tea-c-894_791.html" >Coffee &amp; Tea</a></li><li><a href="https://www.finnishdesignshop.com/tableware-wine-bar-c-894_852.html" >Wine &amp; Bar</a></li>  </ul></div></div><div class="col-xs-3"><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/bathroom-c-999.html" >Bathroom</a></h4>  <ul class="list-unstyled"><li><a href="https://www.finnishdesignshop.com/bathroom-detergents-and-soaps-c-999_1549.html" >Detergents and soaps</a></li><li><a href="https://www.finnishdesignshop.com/bathroom-towels-c-999_1000.html" >Towels</a></li><li><a href="https://www.finnishdesignshop.com/bathroom-bathrobes-c-999_1001.html" >Bathrobes</a></li><li><a href="https://www.finnishdesignshop.com/bathroom-accessories-c-999_1003.html" >Accessories</a></li>  </ul></div><div class="col-md-6">  <h4><a href="https://www.finnishdesignshop.com/corporate-gifts-c-1164.html" >Corporate Gifts</a></h4>  <ul class="list-unstyled">  </ul></div></div>                    
+                    </div>
+                </section>
+
+                                <div class="row copyright">
+                    <div class="col-sm-12">
+                        <ul class="nav nav-pills text-center" >
+                            <li>
+                                <p>Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.</p>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="terms_and_info2.php?p=terms_of_use">Terms of Use</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="terms_and_info2.php?p=privacy">Privacy Policy</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="sitemap.php">Site Map</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            
+                                <div class="row">
+                    <div class="col-sm-12">
+                        
+
+<div class="row paymentlogos">
+	<div class="col-xs-12">
+		<img src="layout/images/ui/partners-com.png?v=170410" alt="" class="hidden-xs" style="">
+		<img src="layout/images/ui/partners-com-mobile.png?v=170412" alt="" class="visible-xs-inline" style="">
+	</div>
+</div>
+                    </div>
+                </div>
+                
+                                <div class="contact visible-xs">
+                    <hr>                
+                    <div>
+                        <strong class="font-knockout"><a href="https://www.finnishdesignshop.com/terms_and_info2.php">Customer Service</a></strong><br>
+                        <a href="tel:+358207432530">Tel. +358 20 743 2530</a>&nbsp;
+(<span data-personalize="customer-service-status"></span>)<br>
+<a href="/cdn-cgi/l/email-protection#50393e363f1036393e3e39233834352339373e23383f207e333f3d"><span class="__cf_email__" data-cfemail="721b1c141d32141b1c1c1b011a1617011b151c011a1d025c111d1f">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a>                    </div>
+                </div>
+                
+                <p>&nbsp;</p>
+                
+                                <div class="row thawte">
+                    <div class="col-sm-12 text-center" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+    <script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.finnishdesignshop.com&amp;size=S&amp;use_flash=NO&amp;use_transparent=YES&amp;lang=en"></script><br />
+    <a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a>
+</div>                </div>
+            </div>
+        </footer>
+        
+    </div>
+</div>
+
+<div class="sb-slidebar sb-width-wide sb-left">
+	<div class="container" style="width: auto">
+	    <div class="row wide">
+	    	<div class="col-md-12">
+		    	
+				<header class="text-center inverse">
+					<div class="container">
+						<a href="javascript:void(0)" class="sb-close pull-left large close-link">&times;</a>
+						<a href="https://www.finnishdesignshop.com/login.php" class="pull-right login-link">Log in</a>					</div>
+				</header>
+				
+				<div class="clearfix"></div>
+				
+								<div class="search-sidebar inverse">
+					<div class="container">
+						<form class="form-inline search_form-sidebar" name="search_form-sidebar" action="search" method="get" accept-charset="utf-8">
+							<input type="hidden" name="csrf_token" value="z32QQmGtKak0oOxls/DFu/eJAqCtkLphR2IGJglLUfk=">							<div class="form-group">
+								<div class="input-group plain">
+									<input type="search" name="q" class="form-control" id="keywords-sidebar" placeholder="" autocomplete="off">
+									<span class="input-group-btn">
+								        <button type="submit" value="Search" class="btn btn-default text-uppercase font-knockout">Search</button>
+									</span>
+								</div>
+							</div>
+						</form>
+					</div>						
+				</div>
+				
+				                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a href="#chooseShippingCountry" data-toggle="modal">Ship to <u data-personalize="change-country" data-personalize-key="country_string" style="opacity:0;"></u>&nbsp;<span data-personalize="change-country" data-personalize-key="country_suffix"></span></a>
+                    </li>
+                </ul>
+
+				<ul class="nav nav-pills nav-stacked inverse">
+	    			
+	    				    			
+				    <li><a href="https://www.finnishdesignshop.com/products_new.php">What&rsquo;s New</a></li>
+	    			<li><a href="https://www.finnishdesignshop.com/campaigns.php">Campaigns</a></li>
+	    			<li><a href="https://www.finnishdesignshop.com/products.php">Products</a></li>
+					<li>
+						<a href="https://www.finnishdesignshop.com/brands.php">Brands</a>
+					</li>
+    				<li>
+    					<a href="https://www.finnishdesignshop.com/inspiration">Inspiration</a>
+    				</li>
+	    			<li><a href="https://www.finnishdesignshop.com/gift-ideas-c-260_366.html">Gift Ideas</a></li>
+					<li>
+						<a href="https://www.finnishdesignshop.com/contract-sales">Pro</a>
+					</li>
+	    								<li><a href="https://www.finnishdesignshop.com/specials.php">Outlet</a></li>
+									</ul>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="https://www.finnishdesignshop.com/terms_and_info2.php">Help</a></li>
+	    		</ul>
+
+	    	</div>
+	    </div>
+	</div>
+</div>
+
+
+<div id="chooseShopModalContainer"></div>
+
+
+
+    <!-- Modal chooseShippingCountry -->
+    <div class="modal fade" id="fdsNewsletterPrompt" tabindex="-1" role="dialog" aria-labelledby="fdsNewsletterPromptLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 hidden-sm hidden-xs">
+                            <img class="newsletter-landing-image img-responsive" src="images/terms_and_info/Pop_up_1_menu_com_oikea.jpg" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button type="button" class="close en" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 newsletter-modal-padding">
+                                    <h1 class="text-center"><span class="newsletter-landing-header custom-underline">Perk for new subscribers!</span></h1>
+                                    <div class="description text-center" data-append-regional-html="{}">
+                                        <p>Sign up for the Finnish Design Shop newsletter and get 10 &euro; off your next purchase! You will receive an eGift Card that is valid for 14 days and can be used for orders worth 50 &euro; or more in our online store.&nbsp;</p>
+<p><small><em>* Value in other currencies: 10&nbsp;$, 10&nbsp;AU$, 10&nbsp;SG$, 10&nbsp;C$, 10&nbsp;CHF, 10&nbsp;&euro;, 1000&nbsp;&yen;</em></small></p>                                    </div>
+                                    <form class="newsletter-landing-modal" name="newsletter" action="newsletters.php" method="post">
+                                        <input type="hidden" name="csrf_token" value="z32QQmGtKak0oOxls/DFu/eJAqCtkLphR2IGJglLUfk=">                                        <div class="form-group row">
+                                            <div class="col-xs-10 col-xs-offset-1">
+                                                <input type="email" autocomplete="off" class="form-control" name="email" placeholder="Email address">
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="newsletter_landing" value="1">
+                                        <div class="form-group row">
+                                            <div class="col-xs-10 col-xs-offset-1">
+                                                <button type="submit" value="" class="btn btn-primary newsletter-ajax-submit">Go &gt;</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-12 text-center">
+                                                <label for="newsletter-country">Your country:</label>
+                                                <div class="text-like-select">
+                                                    <span class="text-like-select__label loading">...</span>
+                                                    <select id="newsletter-country" name="country" data-country-preselect-by-content>
+                                                                                                            <option value="AL">Albania</option>
+                                                                                                            <option value="DZ">Algeria</option>
+                                                                                                            <option value="AD">Andorra</option>
+                                                                                                            <option value="AO">Angola</option>
+                                                                                                            <option value="AR">Argentina</option>
+                                                                                                            <option value="AW">Aruba</option>
+                                                                                                            <option value="AU">Australia</option>
+                                                                                                            <option value="AT">Austria</option>
+                                                                                                            <option value="AZ">Azerbaijan</option>
+                                                                                                            <option value="BS">Bahamas</option>
+                                                                                                            <option value="BH">Bahrain</option>
+                                                                                                            <option value="BD">Bangladesh</option>
+                                                                                                            <option value="BB">Barbados</option>
+                                                                                                            <option value="BY">Belarus</option>
+                                                                                                            <option value="BE">Belgium</option>
+                                                                                                            <option value="BZ">Belize</option>
+                                                                                                            <option value="BJ">Benin</option>
+                                                                                                            <option value="BM">Bermuda</option>
+                                                                                                            <option value="BT">Bhutan</option>
+                                                                                                            <option value="BO">Bolivia</option>
+                                                                                                            <option value="BA">Bosnia</option>
+                                                                                                            <option value="BW">Botswana</option>
+                                                                                                            <option value="BR">Brazil</option>
+                                                                                                            <option value="VG">British Virgin Islands</option>
+                                                                                                            <option value="BN">Brunei</option>
+                                                                                                            <option value="BG">Bulgaria</option>
+                                                                                                            <option value="BF">Burkina Faso</option>
+                                                                                                            <option value="BI">Burundi</option>
+                                                                                                            <option value="KH">Cambodia</option>
+                                                                                                            <option value="CM">Cameroon</option>
+                                                                                                            <option value="CA">Canada</option>
+                                                                                                            <option value="IC">Canary Islands</option>
+                                                                                                            <option value="CV">Cape Verde Island</option>
+                                                                                                            <option value="KY">Cayman Islands</option>
+                                                                                                            <option value="CF">Central African Republic</option>
+                                                                                                            <option value="TD">Chad</option>
+                                                                                                            <option value="CL">Chile</option>
+                                                                                                            <option value="CN">China</option>
+                                                                                                            <option value="CO">Colombia</option>
+                                                                                                            <option value="CG">Congo</option>
+                                                                                                            <option value="CK">Cook Islands</option>
+                                                                                                            <option value="CR">Costa Rica</option>
+                                                                                                            <option value="HR">Croatia</option>
+                                                                                                            <option value="CY">Cyprus</option>
+                                                                                                            <option value="CZ">Czech Republic</option>
+                                                                                                            <option value="DK">Denmark</option>
+                                                                                                            <option value="DJ">Djibouti</option>
+                                                                                                            <option value="EC">Ecuador</option>
+                                                                                                            <option value="EG">Egypt</option>
+                                                                                                            <option value="SV">El Salvador</option>
+                                                                                                            <option value="GQ">Equatorial Guinea</option>
+                                                                                                            <option value="EE">Estonia</option>
+                                                                                                            <option value="ET">Ethiopia</option>
+                                                                                                            <option value="FJ">Fiji</option>
+                                                                                                            <option value="FI">Finland</option>
+                                                                                                            <option value="FR">France</option>
+                                                                                                            <option value="GF">French Guiana</option>
+                                                                                                            <option value="PF">French Polynesia</option>
+                                                                                                            <option value="GA">Gabon</option>
+                                                                                                            <option value="GM">Gambia</option>
+                                                                                                            <option value="GE">Georgia</option>
+                                                                                                            <option value="DE">Germany</option>
+                                                                                                            <option value="GH">Ghana</option>
+                                                                                                            <option value="GI">Gibraltar</option>
+                                                                                                            <option value="GR">Greece</option>
+                                                                                                            <option value="GL">Greenland</option>
+                                                                                                            <option value="GD">Grenada</option>
+                                                                                                            <option value="GP">Guadeloupe</option>
+                                                                                                            <option value="GU">Guam</option>
+                                                                                                            <option value="GT">Guatemala</option>
+                                                                                                            <option value="GN">Guinea</option>
+                                                                                                            <option value="GW">Guinea-Bissau</option>
+                                                                                                            <option value="GY">Guyana</option>
+                                                                                                            <option value="HT">Haiti</option>
+                                                                                                            <option value="HN">Honduras</option>
+                                                                                                            <option value="HK">Hong Kong</option>
+                                                                                                            <option value="HU">Hungary</option>
+                                                                                                            <option value="IS">Iceland</option>
+                                                                                                            <option value="IN">India</option>
+                                                                                                            <option value="ID">Indonesia</option>
+                                                                                                            <option value="IQ">Iraq</option>
+                                                                                                            <option value="IE">Ireland</option>
+                                                                                                            <option value="IL">Israel</option>
+                                                                                                            <option value="IT">Italy</option>
+                                                                                                            <option value="JP">Japan</option>
+                                                                                                            <option value="JO">Jordan</option>
+                                                                                                            <option value="KE">Kenya</option>
+                                                                                                            <option value="KI">Kiribati</option>
+                                                                                                            <option value="KR">Korea South</option>
+                                                                                                            <option value="KW">Kuwait</option>
+                                                                                                            <option value="LA">Laos</option>
+                                                                                                            <option value="LV">Latvia</option>
+                                                                                                            <option value="LB">Lebanon</option>
+                                                                                                            <option value="LS">Lesotho</option>
+                                                                                                            <option value="LR">Liberia</option>
+                                                                                                            <option value="LY">Libya</option>
+                                                                                                            <option value="LI">Liechtenstein</option>
+                                                                                                            <option value="LT">Lithuania</option>
+                                                                                                            <option value="LU">Luxembourg</option>
+                                                                                                            <option value="MO">Macau</option>
+                                                                                                            <option value="MG">Madagascar</option>
+                                                                                                            <option value="MW">Malawi</option>
+                                                                                                            <option value="MY">Malaysia</option>
+                                                                                                            <option value="MV">Maldives</option>
+                                                                                                            <option value="ML">Mali</option>
+                                                                                                            <option value="MT">Malta</option>
+                                                                                                            <option value="MH">Marshall Islands</option>
+                                                                                                            <option value="MQ">Martinique</option>
+                                                                                                            <option value="MR">Mauritania</option>
+                                                                                                            <option value="MU">Mauritius</option>
+                                                                                                            <option value="MX">Mexico</option>
+                                                                                                            <option value="FM">Micronesia Federated States of</option>
+                                                                                                            <option value="MC">Monaco</option>
+                                                                                                            <option value="MN">Mongolia</option>
+                                                                                                            <option value="MS">Montserrat</option>
+                                                                                                            <option value="MA">Morocco</option>
+                                                                                                            <option value="MZ">Mozambique</option>
+                                                                                                            <option value="NA">Namibia</option>
+                                                                                                            <option value="NP">Nepal</option>
+                                                                                                            <option value="NL">Netherlands</option>
+                                                                                                            <option value="AN">Netherlands Antilles</option>
+                                                                                                            <option value="NC">New Caledonia</option>
+                                                                                                            <option value="NZ">New Zealand</option>
+                                                                                                            <option value="NI">Nicaragua</option>
+                                                                                                            <option value="NE">Niger</option>
+                                                                                                            <option value="NG">Nigeria</option>
+                                                                                                            <option value="NF">Norfolk Island</option>
+                                                                                                            <option value="NO">Norway</option>
+                                                                                                            <option value="OM">Oman</option>
+                                                                                                            <option value="PK">Pakistan</option>
+                                                                                                            <option value="PA">Panama</option>
+                                                                                                            <option value="PG">Papua New Guinea</option>
+                                                                                                            <option value="PY">Paraguay</option>
+                                                                                                            <option value="PE">Peru</option>
+                                                                                                            <option value="PH">Philippines</option>
+                                                                                                            <option value="PL">Poland</option>
+                                                                                                            <option value="PT">Portugal</option>
+                                                                                                            <option value="PR">Puerto Rico</option>
+                                                                                                            <option value="QA">Qatar</option>
+                                                                                                            <option value="RE">Reunion</option>
+                                                                                                            <option value="RO">Romania</option>
+                                                                                                            <option value="RU">Russia</option>
+                                                                                                            <option value="RW">Rwanda</option>
+                                                                                                            <option value="WS">Samoa</option>
+                                                                                                            <option value="SM">San Marino</option>
+                                                                                                            <option value="SA">Saudi Arabia</option>
+                                                                                                            <option value="SN">Senegal</option>
+                                                                                                            <option value="RS">Serbia</option>
+                                                                                                            <option value="SC">Seychelles</option>
+                                                                                                            <option value="SL">Sierra Leone</option>
+                                                                                                            <option value="SG">Singapore</option>
+                                                                                                            <option value="SK">Slovakia (Slovak Republic)</option>
+                                                                                                            <option value="SI">Slovenia</option>
+                                                                                                            <option value="SB">Solomon Islands</option>
+                                                                                                            <option value="ZA">South Africa</option>
+                                                                                                            <option value="ES">Spain</option>
+                                                                                                            <option value="LK">Sri Lanka</option>
+                                                                                                            <option value="KN">St. Kitts and Nevis</option>
+                                                                                                            <option value="LC">St. Lucia</option>
+                                                                                                            <option value="SR">Suriname</option>
+                                                                                                            <option value="SZ">Swaziland</option>
+                                                                                                            <option value="SE">Sweden</option>
+                                                                                                            <option value="CH">Switzerland</option>
+                                                                                                            <option value="TW">Taiwan</option>
+                                                                                                            <option value="TZ">Tanzania</option>
+                                                                                                            <option value="TH">Thailand</option>
+                                                                                                            <option value="TG">Togo</option>
+                                                                                                            <option value="TO">Tonga</option>
+                                                                                                            <option value="TN">Tunisia</option>
+                                                                                                            <option value="TR">Turkey</option>
+                                                                                                            <option value="TM">Turkmenistan</option>
+                                                                                                            <option value="TV">Tuvalu</option>
+                                                                                                            <option value="UG">Uganda</option>
+                                                                                                            <option value="UA">Ukraine</option>
+                                                                                                            <option value="AE">United Arab Emirates</option>
+                                                                                                            <option value="GB">United Kingdom</option>
+                                                                                                            <option value="US">United States</option>
+                                                                                                            <option value="UY">Uruguay</option>
+                                                                                                            <option value="VU">Vanuatu</option>
+                                                                                                            <option value="VA">Vatican City State</option>
+                                                                                                            <option value="VE">Venezuela</option>
+                                                                                                            <option value="VN">Vietnam</option>
+                                                                                                            <option value="ZM">Zambia</option>
+                                                                                                            <option value="ZW">Zimbabwe</option>
+                                                                                                        </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-10 col-xs-offset-1">
+                                                <button type="button" class="btn btn-link newsletter-dismiss" data-dismiss="modal" aria-hidden="true">No thanks, I'll continue shopping &gt;</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<!-- Modal companyCustomerInfo -->
+<div class="modal fade" id="dduModal" tabindex="-1" role="dialog" aria-labelledby="dduModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<button type="button" class="close en" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Taxes and duties</h4>
+			</div>
+			
+			<div class="modal-body">
+				All non-EU countries are shipped to on a DDU (Delivered Duty Unpaid) basis, which means that all product prices displayed are exclusive of all taxes and duties. When shipping internationally, you are responsible for any customs duties and taxes that are levied by your destination country. Finnish Design Shop does not collect these fees. All orders are shipped from Finland. Each product’s country of origin is indicated in the documents (non-EU orders only).			</div>
+			<div class="clearfix"></div>
+			
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+    <!-- Modal chooseShippingCountry -->
+    <div class="modal fade" id="chooseShippingCountry" tabindex="-1" role="dialog" aria-labelledby="chooseShippingCountryLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close en" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="chooseShippingCountryLabel">Select shipping country</h4>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Please select your shipping country to display the correct pricing and available shipping methods.</p>                        </div>
+                        <div class="col-xs-12">
+                            <form method="get" action="" id="chooseCountryForm">
+                                <div class="form-group">
+                                    <label for="regionSelect">Shipping country</label>
+                                    <select name="region" class="form-control" id="regionSelect">
+                                        
+                <option value='al' data-currency='EUR'>Albania</option>
+                <option value='dz' data-currency='USD'>Algeria</option>
+                <option value='ad' data-currency='EUR'>Andorra</option>
+                <option value='ao' data-currency='USD'>Angola</option>
+                <option value='ar' data-currency='USD'>Argentina</option>
+                <option value='aw' data-currency='USD'>Aruba</option>
+                <option value='au' data-currency='AUD'>Australia</option>
+                <option value='at' data-currency='EUR'>Austria</option>
+                <option value='az' data-currency='USD'>Azerbaijan</option>
+                <option value='bs' data-currency='USD'>Bahamas</option>
+                <option value='bh' data-currency='USD'>Bahrain</option>
+                <option value='bd' data-currency='USD'>Bangladesh</option>
+                <option value='bb' data-currency='USD'>Barbados</option>
+                <option value='by' data-currency='USD'>Belarus</option>
+                <option value='be' data-currency='EUR'>Belgium</option>
+                <option value='bz' data-currency='USD'>Belize</option>
+                <option value='bj' data-currency='USD'>Benin</option>
+                <option value='bm' data-currency='USD'>Bermuda</option>
+                <option value='bt' data-currency='USD'>Bhutan</option>
+                <option value='bo' data-currency='USD'>Bolivia</option>
+                <option value='ba' data-currency='EUR'>Bosnia</option>
+                <option value='bw' data-currency='USD'>Botswana</option>
+                <option value='br' data-currency='USD'>Brazil</option>
+                <option value='vg' data-currency='USD'>British Virgin Islands</option>
+                <option value='bn' data-currency='USD'>Brunei</option>
+                <option value='bg' data-currency='EUR'>Bulgaria</option>
+                <option value='bf' data-currency='USD'>Burkina Faso</option>
+                <option value='bi' data-currency='USD'>Burundi</option>
+                <option value='kh' data-currency='USD'>Cambodia</option>
+                <option value='cm' data-currency='USD'>Cameroon</option>
+                <option value='ca' data-currency='CAD'>Canada</option>
+                <option value='ic' data-currency='EUR'>Canary Islands</option>
+                <option value='cv' data-currency='USD'>Cape Verde Island</option>
+                <option value='ky' data-currency='USD'>Cayman Islands</option>
+                <option value='cf' data-currency='USD'>Central African Republic</option>
+                <option value='td' data-currency='USD'>Chad</option>
+                <option value='cl' data-currency='USD'>Chile</option>
+                <option value='cn' data-currency='USD'>China</option>
+                <option value='co' data-currency='USD'>Colombia</option>
+                <option value='cg' data-currency='USD'>Congo</option>
+                <option value='ck' data-currency='USD'>Cook Islands</option>
+                <option value='cr' data-currency='USD'>Costa Rica</option>
+                <option value='hr' data-currency='EUR'>Croatia</option>
+                <option value='cy' data-currency='EUR'>Cyprus</option>
+                <option value='cz' data-currency='EUR'>Czech Republic</option>
+                <option value='dk' data-currency='EUR'>Denmark</option>
+                <option value='dj' data-currency='USD'>Djibouti</option>
+                <option value='ec' data-currency='USD'>Ecuador</option>
+                <option value='eg' data-currency='USD'>Egypt</option>
+                <option value='sv' data-currency='USD'>El Salvador</option>
+                <option value='gq' data-currency='USD'>Equatorial Guinea</option>
+                <option value='ee' data-currency='EUR'>Estonia</option>
+                <option value='et' data-currency='USD'>Ethiopia</option>
+                <option value='fj' data-currency='USD'>Fiji</option>
+                <option value='fi' data-currency='EUR'>Finland</option>
+                <option value='fr' data-currency='EUR'>France</option>
+                <option value='gf' data-currency='EUR'>French Guiana</option>
+                <option value='pf' data-currency='USD'>French Polynesia</option>
+                <option value='ga' data-currency='USD'>Gabon</option>
+                <option value='gm' data-currency='USD'>Gambia</option>
+                <option value='ge' data-currency='USD'>Georgia</option>
+                <option value='de' data-currency='EUR'>Germany</option>
+                <option value='gh' data-currency='USD'>Ghana</option>
+                <option value='gi' data-currency='GBP'>Gibraltar</option>
+                <option value='gr' data-currency='EUR'>Greece</option>
+                <option value='gl' data-currency='USD'>Greenland</option>
+                <option value='gd' data-currency='USD'>Grenada</option>
+                <option value='gp' data-currency='USD'>Guadeloupe</option>
+                <option value='gu' data-currency='USD'>Guam</option>
+                <option value='gt' data-currency='USD'>Guatemala</option>
+                <option value='gn' data-currency='USD'>Guinea</option>
+                <option value='gw' data-currency='USD'>Guinea-Bissau</option>
+                <option value='gy' data-currency='USD'>Guyana</option>
+                <option value='ht' data-currency='USD'>Haiti</option>
+                <option value='hn' data-currency='USD'>Honduras</option>
+                <option value='hk' data-currency='USD'>Hong Kong</option>
+                <option value='hu' data-currency='EUR'>Hungary</option>
+                <option value='is' data-currency='USD'>Iceland</option>
+                <option value='in' data-currency='USD'>India</option>
+                <option value='id' data-currency='USD'>Indonesia</option>
+                <option value='iq' data-currency='USD'>Iraq</option>
+                <option value='ie' data-currency='EUR'>Ireland</option>
+                <option value='il' data-currency='USD'>Israel</option>
+                <option value='it' data-currency='EUR'>Italy</option>
+                <option value='jp' data-currency='JPY'>Japan</option>
+                <option value='jo' data-currency='USD'>Jordan</option>
+                <option value='ke' data-currency='USD'>Kenya</option>
+                <option value='ki' data-currency='USD'>Kiribati</option>
+                <option value='kr' data-currency='USD'>Korea South</option>
+                <option value='kw' data-currency='USD'>Kuwait</option>
+                <option value='la' data-currency='USD'>Laos</option>
+                <option value='lv' data-currency='EUR'>Latvia</option>
+                <option value='lb' data-currency='GBP'>Lebanon</option>
+                <option value='ls' data-currency='USD'>Lesotho</option>
+                <option value='lr' data-currency='USD'>Liberia</option>
+                <option value='ly' data-currency='USD'>Libya</option>
+                <option value='li' data-currency='EUR'>Liechtenstein</option>
+                <option value='lt' data-currency='EUR'>Lithuania</option>
+                <option value='lu' data-currency='EUR'>Luxembourg</option>
+                <option value='mo' data-currency='USD'>Macau</option>
+                <option value='mg' data-currency='USD'>Madagascar</option>
+                <option value='mw' data-currency='USD'>Malawi</option>
+                <option value='my' data-currency='USD'>Malaysia</option>
+                <option value='mv' data-currency='USD'>Maldives</option>
+                <option value='ml' data-currency='USD'>Mali</option>
+                <option value='mt' data-currency='EUR'>Malta</option>
+                <option value='mh' data-currency='USD'>Marshall Islands</option>
+                <option value='mq' data-currency='EUR'>Martinique</option>
+                <option value='mr' data-currency='USD'>Mauritania</option>
+                <option value='mu' data-currency='USD'>Mauritius</option>
+                <option value='mx' data-currency='USD'>Mexico</option>
+                <option value='fm' data-currency='USD'>Micronesia Federated States of</option>
+                <option value='mc' data-currency='EUR'>Monaco</option>
+                <option value='mn' data-currency='USD'>Mongolia</option>
+                <option value='ms' data-currency='USD'>Montserrat</option>
+                <option value='ma' data-currency='USD'>Morocco</option>
+                <option value='mz' data-currency='USD'>Mozambique</option>
+                <option value='na' data-currency='USD'>Namibia</option>
+                <option value='np' data-currency='USD'>Nepal</option>
+                <option value='nl' data-currency='EUR'>Netherlands</option>
+                <option value='an' data-currency='USD'>Netherlands Antilles</option>
+                <option value='nc' data-currency='USD'>New Caledonia</option>
+                <option value='nz' data-currency='AUD'>New Zealand</option>
+                <option value='ni' data-currency='USD'>Nicaragua</option>
+                <option value='ne' data-currency='USD'>Niger</option>
+                <option value='ng' data-currency='USD'>Nigeria</option>
+                <option value='nf' data-currency='AUD'>Norfolk Island</option>
+                <option value='no' data-currency='EUR'>Norway</option>
+                <option value='om' data-currency='USD'>Oman</option>
+                <option value='pk' data-currency='USD'>Pakistan</option>
+                <option value='pa' data-currency='USD'>Panama</option>
+                <option value='pg' data-currency='USD'>Papua New Guinea</option>
+                <option value='py' data-currency='USD'>Paraguay</option>
+                <option value='pe' data-currency='USD'>Peru</option>
+                <option value='ph' data-currency='USD'>Philippines</option>
+                <option value='pl' data-currency='EUR'>Poland</option>
+                <option value='pt' data-currency='EUR'>Portugal</option>
+                <option value='pr' data-currency='USD'>Puerto Rico</option>
+                <option value='qa' data-currency='USD'>Qatar</option>
+                <option value='re' data-currency='USD'>Reunion</option>
+                <option value='ro' data-currency='EUR'>Romania</option>
+                <option value='ru' data-currency='EUR'>Russia</option>
+                <option value='rw' data-currency='USD'>Rwanda</option>
+                <option value='ws' data-currency='USD'>Samoa</option>
+                <option value='sm' data-currency='EUR'>San Marino</option>
+                <option value='sa' data-currency='USD'>Saudi Arabia</option>
+                <option value='sn' data-currency='USD'>Senegal</option>
+                <option value='rs' data-currency='EUR'>Serbia</option>
+                <option value='sc' data-currency='USD'>Seychelles</option>
+                <option value='sl' data-currency='USD'>Sierra Leone</option>
+                <option value='sg' data-currency='SGD'>Singapore</option>
+                <option value='sk' data-currency='EUR'>Slovakia (Slovak Republic)</option>
+                <option value='si' data-currency='EUR'>Slovenia</option>
+                <option value='sb' data-currency='USD'>Solomon Islands</option>
+                <option value='za' data-currency='USD'>South Africa</option>
+                <option value='es' data-currency='EUR'>Spain</option>
+                <option value='lk' data-currency='USD'>Sri Lanka</option>
+                <option value='kn' data-currency='USD'>St. Kitts and Nevis</option>
+                <option value='lc' data-currency='USD'>St. Lucia</option>
+                <option value='sr' data-currency='USD'>Suriname</option>
+                <option value='sz' data-currency='USD'>Swaziland</option>
+                <option value='se' data-currency='EUR'>Sweden</option>
+                <option value='ch' data-currency='CHF'>Switzerland</option>
+                <option value='tw' data-currency='USD'>Taiwan</option>
+                <option value='tz' data-currency='USD'>Tanzania</option>
+                <option value='th' data-currency='USD'>Thailand</option>
+                <option value='tg' data-currency='USD'>Togo</option>
+                <option value='to' data-currency='USD'>Tonga</option>
+                <option value='tn' data-currency='USD'>Tunisia</option>
+                <option value='tr' data-currency='EUR'>Turkey</option>
+                <option value='tm' data-currency='USD'>Turkmenistan</option>
+                <option value='tv' data-currency='AUD'>Tuvalu</option>
+                <option value='ug' data-currency='USD'>Uganda</option>
+                <option value='ua' data-currency='EUR'>Ukraine</option>
+                <option value='ae' data-currency='USD'>United Arab Emirates</option>
+                <option value='gb' data-currency='GBP'>United Kingdom</option>
+                <option value='us' data-currency='USD'>United States</option>
+                <option value='uy' data-currency='USD'>Uruguay</option>
+                <option value='vu' data-currency='USD'>Vanuatu</option>
+                <option value='va' data-currency='EUR'>Vatican City State</option>
+                <option value='ve' data-currency='USD'>Venezuela</option>
+                <option value='vn' data-currency='USD'>Vietnam</option>
+                <option value='zm' data-currency='USD'>Zambia</option>
+                <option value='zw' data-currency='USD'>Zimbabwe</option>                                    </select>
+                                </div>
+                                                            <div class="form-group">
+                                    <div>
+                                        Billing currency                                    </div>
+                                    <div>
+                                        <b><span id="chooseShippingCountryCurrency"></span></b>
+                                    </div>
+									<span id="shippingCountryDefaultCurrency" data-value="USD" class="hidden"></span>
+                    				<span id="shippingCountryCurrenciesJson" data-value='{"USD":"US Dollar (USD&nbsp;$)","EUR":"Euro (EUR&nbsp;&euro;)","GBP":"British Pound (GBP&nbsp;&pound;)","AUD":"Australian Dollar (AUD&nbsp;AU$)","CAD":"Canada Dollar (CAD&nbsp;C$)","CHF":"Swiss Franc (CHF&nbsp;CHF)","JPY":"Japan Yen (JPY&nbsp;&yen;)","SGD":"Singapore Dollar (SGD&nbsp;SG$)"}' class="hidden"></span>
+                                </div>
+                                                            <div class="form-group">
+                                    <button type="submit" class="btn btn-blue" style="margin-left: 0">Confirm country &gt;</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+<!-- Modal companyCustomerInfo -->
+<div class="modal fade" id="customerServiceHoursModal" tabindex="-1" role="dialog" aria-labelledby="customerServiceHoursModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			
+			<div class="modal-header">
+				<button type="button" class="close en" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Customer service hours</h4>
+			</div>
+			
+			<div class="modal-body">
+				<p><span style='background-color: #ffed00; width: 1em; height: 1em; border-radius: 50%; display: inline-block; position: relative; top: 1px;'></span>&nbsp;&nbsp;Customer Service is closed at the moment</p><p>Please email us at <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="234a4d454c63454a4d4d4a504b4746504a444d504b4c530d404c4e">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>, and we&rsquo;ll get back to you as soon as possible.</p>				<p><strong>Customer Service hours (GMT +3)</strong></p>
+<table style="height: 148px;" width="157">
+<tbody>
+<tr>
+<td>Monday</td>
+<td>9:00&ndash;16:30</td>
+</tr>
+<tr>
+<td>Tuesday</td>
+<td>9:00&ndash;16:30</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>9:00&ndash;16:30</td>
+</tr>
+<tr>
+<td>Thursday</td>
+<td>9:00&ndash;16:30</td>
+</tr>
+<tr>
+<td>Friday</td>
+<td>9:00&ndash;16:30</td>
+</tr>
+<tr>
+<td>Saturday</td>
+<td>10:00&ndash;18:00</td>
+</tr>
+<tr>
+<td>Sunday</td>
+<td>10:00&ndash;18:00</td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Please note that our Customer Service is closed on Ascension Day, 25 May 2017.</strong></p>
+<p><strong><span style="color: #333333; font-family: Verdana,;">Contact Information</span></strong></p>
+<p><a style="box-sizing: border-box; -webkit-font-smoothing: subpixel-antialiased; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: #003399; text-decoration: none; font-family: Verdana, 'Open Sans', Roboto, Geneva, Arial, Helvetica, sans-serif;" href="tel:+358207432530">Tel. +358 20 743 2530</a></p>
+<p><a style="box-sizing: border-box; -webkit-font-smoothing: subpixel-antialiased; background-image: initial; background-position: 0px 0px; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; color: #003399; text-decoration: none; font-family: Verdana, 'Open Sans', Roboto, Geneva, Arial, Helvetica, sans-serif;" href="/cdn-cgi/l/email-protection#1a73747c755a7c7374747369727e7f69737d746972756a34797577"><span class="__cf_email__" data-cfemail="1e777078715e78777070776d767a7b6d7779706d76716e307d7173">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></p>			</div>
+			<div class="modal-footer">
+				Copyright &copy; Finnish Design Shop, 2004&ndash;2017. All rights reserved.			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Klevu -->
+<script>
+ var klevu_cms_module_enabled=true, klevu_cmsSearchEnabled = true,klevu_current_version = '20.0.1';
+ var klevu_storeLandingPageUrl = 'https://www.finnishdesignshop.com/search',klevu_showQuickSearchOnEnter=false,klevu_searchQueryParam='q';
+ var searchTextBoxName = 'q',
+        klevu_lang = 'en',
+        klevu_result_top_margin = '',
+        klevu_result_left_margin = '';
+</script>
+
+<!-- rev-hash -->
+<script src="javascript/fds-min.js?v=42e3cc51397a196b0b98c89ba062c43f"></script>
+<!-- end -->
+
+<script type="text/javascript">
+
+
+    show_localized_prices();
+    
+    $.ajax({
+      dataType: "json",
+      url: "personalize.php"
+    }).done(function(data) {
+
+        $("[data-country-preselect-by-content]").not("[data-country_prefill='no']").children("option").filter(function() {
+            return $(this).text() === data.country_string;
+        }).prop("selected", true).trigger("change");
+        
+        $(document).ready(function() {
+            update_price_texts({
+                free_shipping_limit : data.free_shipping_limit,
+                code : data.currency_code,
+                value : data.currency_value,
+                symbol_left : data.currency_symbol_left,
+                symbol_right : data.currency_symbol_right,
+                decimal_separator : data.currency_decimal_separator
+            });
+        });
+
+            show_localized_prices();
+
+        $(document).ready(function() {
+            var node_product_info_shipto = $('#product-shipping-info-link');
+            node_product_info_shipto.html(data.country_string); // tuotekortin "Shipping to"
+            node_product_info_shipto.animate({
+                opacity : 1
+            });
+
+            $("#chooseShopModalContainer").load("includes/modal_change_shop.php", "ajax=1", function() {
+                var modal = $(this).find("#chooseShop");
+                // Jos ollaan COMissa, katsotaan voidaanko kÃ¤yttÃ¤jÃ¤lle tarjota lokalisoitu sivusto.
+                // MyÃ¶skin tarkistetaan ettei modaalia ole jo suljettu.
+                if (typeof $.cookie('region') !== 'undefined' &&
+                    $.inArray($.cookie('region'), ["fi", "it"]) !== -1 &&
+                    $.cookie('closecountrymenu') != 1) {
+
+                    setTimeout(function() {
+                        modal.modal('show');
+                    }, 1500);
+                }
+                modal.on('hide.bs.modal', function(e) {
+                    $.cookie('closecountrymenu', 1, { expires: 30 });
+                });
+            });
+
+			// shipping&delivery-maan esivalinta
+            $("#upsinfo_form select > option[value='" + data.country_id + "']").prop("selected", true);
+
+            // Maa-selectien esivalinta
+            $("select#country").not("[data-country_prefill='no']").children("option[value='" + data.country_id + "']").prop("selected", true).trigger("change");
+            $("[data-country-preselect-by-content]").not("[data-country_prefill='no']").children("option").filter(function() {
+                return $(this).text() === data.country_string;
+            }).prop("selected", true).trigger("change");
+
+            if (data.is_eu_country || $.inArray(data.country_code.toLowerCase(), ['no', 'ch']) >= 0) {
+                $(".benefit-bar [data-localization-group='benefit-bar-noneu']").remove();
+            } else {
+                $(".benefit-bar [data-localization-group='benefit-bar-eu']").remove();
+            }
+
+
+            $(".benefit-bar__localization-group").animate({opacity:1});
+        });
+
+    
+      $('[data-personalize="cart-total"]').html('<a href="https://www.finnishdesignshop.com/shopping_cart.php"><span class="hidden-sm">Total </span><span class="value" id="shopping-cart-new-cart-total">' + data.cart_total_string + '</span></a>');
+
+        if (data.cart_products_quantity > 0) {
+            var badge = $('[data-personalize="cart-products-quantity"]').html('<span class="badge">' + data.cart_products_quantity + '</span>').find(".badge");
+            try {  
+                if (!$("header.visible-xs .benefit-bar").is(".hidden")) {
+                    badge.css("top", localStorage.getItem("benefitBarBadgeTop"));
+                }
+            } catch (e) {
+                console.log("benefit error (badge): " + e);
+            }
+        }
+      
+      // YlÃ¤kulman toimitusmaa
+      $('[data-personalize="change-country"]').each(function() {
+          var key = $(this).data("personalize-key");
+          if (data[key] !== undefined) {
+              $(this).html(data[key]).animate({opacity : 1});
+          }
+      });
+
+      $("[data-personalize='customer-service-status']").html(data.customer_service_status_html);
+
+      // maavalintamodaalin esivalinta
+      var region_options = $("#regionSelect > option");
+      region_options.filter("[value='" + data.country_code.toLowerCase() + "'], [value='" + data.country_code.toUpperCase() + "']").prop("selected", true);
+
+      if (data.is_eu_country || $.inArray(data.country_code.toLowerCase(), ["no", "ch"]) !== -1) {
+        $(".shopping-cart__shop-more").removeClass("hidden");
+      }
+
+      if (data.registry_mode_enabled == 1) {
+        $('[data-personalize="registry-notification"]').html('<a href="add_registry.php?registry_mode_id=0">' + 'You are in registry mode. Click here to leave the registry mode.' + '</a>').show();
+        $('#add_to_cart_form button[type="submit"]').after('<button type="submit" class="addtoregistry btn btn-primary btn-block btn-lg" name="submit_registry" value="&nbsp;">' + 'Add to Registry' + '</button>').remove();
+      }
+
+      if (data.customer_logged == 1) {
+        if (data.customer_registered == 1) {
+          $('[data-personalize="login-links"]').html('<a href="https://www.finnishdesignshop.com/logoff.php">Log out</a>');
+          $('[data-personalize="login-links"]').before('<li><a href="https://www.finnishdesignshop.com/account.php">My Account</a></li>');
+          $('[data-personalize="login-links"]').before('<li class="divider"></li>');
+        }
+        else {
+          $('[data-personalize="login-links"]').html('');
+        }
+      }
+      else {
+          $('[data-personalize="login-links"]').html('<a href="https://www.finnishdesignshop.com/login.php">Log in</a>');
+      }
+        
+
+        (function(data) { // Klevu price localization and API key
+            for (currency_i in data.currencies) {
+                var curr_row = data.currencies[currency_i];
+                klevuLocalization.addCurrencyConf(
+                    new KlevuCurrencyConf(curr_row.code.toUpperCase(), curr_row.rate, curr_row.symbol.trim())
+                );
+            }
+            klevuLocalization.setCurrency(data.currency_code.toUpperCase());
+            klevuLocalization.setRegion(data.country_code.toUpperCase());
+            klevuLocalization.setTaxRate(data.klevu_tax_rate);
+            klevuLocalization.setApiKey(data.klevu_api_key);
+            klevuLocalization.setFixedPrices(data.klevu_fixed_prices);
+
+            // initialize Klevu
+            (function () { var ws = document.createElement('script'),kl_protocol =("https:"===document.location.protocol?"https://":"http://"); ws.type = 'text/javascript'; ws.async = true; ws.src = kl_protocol+'js.klevu.com/klevu-js-v1/js/klevu-webstore.js'; ws.charset="UTF-8"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ws, s); })();
+        })(data);
+
+        localStorage.setItem("personalizedRegion", data.country_code.toLowerCase());
+    });
+
+        
+</script>
+    <script src="ext/js/klevu-user-customization.js?v=9"></script>
+
+	
+<!-- rev-hash -->
+<script src="javascript/product-info-min.js?v=c1680373c78491c2cb7dc97d8405709e"></script>
+<!-- end -->
+
+
+  	<!-- <script src="https://config1.veinteractive.com/tags/4CA66EB6/638B/48CD/83AE/236667CBBB3C/tag.js" type="text/javascript" async></script> -->
+	<!-- Google Code for Remarketing Tag -->
+	<script type="text/javascript">
+	var google_tag_params = {
+	ecomm_prodid: 'LK101XL',
+	ecomm_totalvalue: 1096.00,
+	ecomm_pagetype: 'product'
+	};
+	</script>
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 963936897;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+	</script>
+	<div style="display: none;">
+		<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+		</script>
+	</div>
+	<noscript>
+	<div style="position: absolute; visibility: hidden;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/963936897/?value=1096.00&amp;guid=ON&amp;script=0"/>
+	</div>
+	</noscript>
+			<script src="javascript/tmpl.min.js"></script><script src="javascript/request-a-quote.js"></script><script src="ext/js/jquery.depends.js"></script><script src="https://www.custobar.com/js/custobar.js"></script><script>$(function() {
+    var cb = custobar({"company_token":"D8YHw2qrRL4Dqrmk","banners":{}});
+    cb.customer_id = $.cookie("uid");
+    cb.start();
+    cb.track_browse_product('LK101XL');
+});</script>	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c4b3deeb2c","applicationID":"8054701","transactionName":"b1xRYxEECxdQVRcKXFYWZkUKShUWXlIWAEdnUF1RDEsVDEE=","queueTime":0,"applicationTime":239,"atts":"QxtSFVkeGBk=","errorBeacon":"bam.nr-data.net","agent":""}</script><script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
