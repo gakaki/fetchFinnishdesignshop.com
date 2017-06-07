@@ -8,6 +8,7 @@ from model import Product
 import ujson
 from json2xls.json2xls import Json2Xls
 import copy
+# from retrial.retrial import retry
 
 def write_to_json(list):
     final_res_json = ujson.dumps(list, indent=4)
@@ -22,6 +23,12 @@ def write_to_xls(list):
     file_name_xls = "final_res.xls"
     Json2Xls(file_name_xls, json_data=final_res_excel_json).make()
 
+
+
+# class Product(object):
+#     # @retry(max_attempts=3)
+#     async def fetch_async(url):
+#         return "baby"
 
 if __name__ == '__main__':
     # zhilian = Crawler_zhilian()
@@ -193,7 +200,7 @@ if __name__ == '__main__':
     ]
 
 
-
+    URLS = URLS[:3]
     f = asyncio.wait([print_result(num) for num in URLS])
     loop.run_until_complete(f)
     loop.close()
