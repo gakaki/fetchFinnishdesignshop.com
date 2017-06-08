@@ -1,5 +1,36 @@
 [
     {
+        "name":"Mira chair, hunter green",
+        "product_id":"14125",
+        "menu_text":"Home > Outdoor > Outdoor furniture > Mira chair, hunter green",
+        "menu_links":[
+            "https:\/\/www.finnishdesignshop.com\/index.php",
+            "https:\/\/www.finnishdesignshop.com\/outdoor-c-896.html",
+            "https:\/\/www.finnishdesignshop.com\/outdoor-outdoor-furniture-c-896_779.html"
+        ],
+        "desc":"Mira, designed by Mia Lagerman for Skagerak is a collection of contemporary outdoor furniture that features a simple and airy design. The slender pieces consist of a steel frame and wire mesh elements, which allow rainwater to simply pass through. The Mira collection features a chair, an armchair and two tables that make a stylish addition to any deck, balcony, garden or summer house.",
+        "manufacturer":"Skagerak",
+        "manufacturer_link":"https:\/\/www.finnishdesignshop.com\/Skagerak-m-242.html",
+        "delivery":"",
+        "designer":"Mia Lagerman",
+        "designer_link":"https:\/\/www.finnishdesignshop.com\/Mia_Lagerman-d-789.html",
+        "size":"Width 54 cm, depth 51 cm, height 78 cm",
+        "material":"Steel",
+        "color":"Hunter green",
+        "light_source":"",
+        "mounting":"",
+        "availability":" In stockShips next business day",
+        "price":"$250.00",
+        "img_main":"media\/10SkagerakMira_iso_HV-350.jpg",
+        "img_extends":[
+            "https:\/\/www.finnishdesignshop.com\/media\/10SkagerakMira_iso_HV-40.jpg",
+            "https:\/\/www.finnishdesignshop.com\/media\/2SkagerakMira_iso_HV-40.jpg",
+            "https:\/\/www.finnishdesignshop.com\/media\/3SkagerakMira_iso_HV-40.jpg"
+        ],
+        "":"",
+        "product_url":"https:\/\/www.finnishdesignshop.com\/outdoor-outdoor-furniture-mira-chair-hunter-green-p-14125.html"
+    },
+    {
         "name":"Mira armchair, hunter green",
         "product_id":"14127",
         "menu_text":"Home > Outdoor > Outdoor furniture > Mira armchair, hunter green",
@@ -63,36 +94,5 @@
         ],
         "":"",
         "product_url":"https:\/\/www.finnishdesignshop.com\/outdoor-outdoor-furniture-mira-chair-anthracite-black-p-14126.html"
-    },
-    {
-        "name":"Mira chair, hunter green",
-        "product_id":"14125",
-        "menu_text":"Home > Outdoor > Outdoor furniture > Mira chair, hunter green",
-        "menu_links":[
-            "https:\/\/www.finnishdesignshop.com\/index.php",
-            "https:\/\/www.finnishdesignshop.com\/outdoor-c-896.html",
-            "https:\/\/www.finnishdesignshop.com\/outdoor-outdoor-furniture-c-896_779.html"
-        ],
-        "desc":"Mira, designed by Mia Lagerman for Skagerak is a collection of contemporary outdoor furniture that features a simple and airy design. The slender pieces consist of a steel frame and wire mesh elements, which allow rainwater to simply pass through. The Mira collection features a chair, an armchair and two tables that make a stylish addition to any deck, balcony, garden or summer house.",
-        "manufacturer":"Skagerak",
-        "manufacturer_link":"https:\/\/www.finnishdesignshop.com\/Skagerak-m-242.html",
-        "delivery":"",
-        "designer":"Mia Lagerman",
-        "designer_link":"https:\/\/www.finnishdesignshop.com\/Mia_Lagerman-d-789.html",
-        "size":"Width 54 cm, depth 51 cm, height 78 cm",
-        "material":"Steel",
-        "color":"Hunter green",
-        "light_source":"",
-        "mounting":"",
-        "availability":" In stockShips next business day",
-        "price":"$250.00",
-        "img_main":"media\/10SkagerakMira_iso_HV-350.jpg",
-        "img_extends":[
-            "https:\/\/www.finnishdesignshop.com\/media\/10SkagerakMira_iso_HV-40.jpg",
-            "https:\/\/www.finnishdesignshop.com\/media\/2SkagerakMira_iso_HV-40.jpg",
-            "https:\/\/www.finnishdesignshop.com\/media\/3SkagerakMira_iso_HV-40.jpg"
-        ],
-        "":"",
-        "product_url":"https:\/\/www.finnishdesignshop.com\/outdoor-outdoor-furniture-mira-chair-hunter-green-p-14125.html"
     }
 ]

@@ -190,7 +190,7 @@ if __name__ == '__main__':
         , "https://www.finnishdesignshop.com/outdoor-outdoor-furniture-buggle-bean-bag-pink-p-6620.html"
         , "https://www.finnishdesignshop.com/outdoor-outdoor-furniture-buggle-bean-bag-red-p-2824.html"
         , "https://www.finnishdesignshop.com/outdoor-outdoor-furniture-buggle-bean-bag-sand-p-6616.html"
-        , "https://www.finnishdesignshop.com/outdoor-outdoor-furniture-buggle-bean-bag-taupe-p-3604.html"
+        , "https://wwzw.finnishdesignshop.com/outdoor-outdoor-furniture-buggle-bean-bag-taupe-p-3604.html"
         , "https://www.finnishdesignshop.com/outdoor-outdoor-furniture-buggle-bean-bag-turquoise-p-2825.html"
         , "https://www.finnishdesignshop.com/outdoor-outdoor-furniture-buggle-bean-bag-white-p-2827.html"
         ,
